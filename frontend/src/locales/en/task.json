@@ -1,0 +1,343 @@
+{
+  "quickActions": {
+    "newProject": "New Project",
+    "createObjective": "Create Model",
+    "addTask": "Eval Task",
+    "tutorial": "Tutorial"
+  },
+  "center": {
+    "breadcrumb": "Task List",
+    "pageTitle": "Task List",
+    "pageDesc": "Manage all test tasks",
+    "searchPlaceholder": "Search tasks...",
+    "emptyState": {
+      "title": "No tasks yet",
+      "description": "Create a new task to get started with your security evaluation."
+    },
+    "tabs": {
+      "all": "All",
+      "todo": "Todo",
+      "in_progress": "In Progress",
+      "blocked": "Failed",
+      "done": "Completed"
+    },
+    "table": {
+      "headers": {
+        "title": "Task Title",
+        "target": "Target",
+        "project": "Project",
+        "status": "Status",
+        "order": "Order",
+        "tags": "Tags",
+        "actions": "Actions"
+      },
+      "loading": "Loading...",
+      "empty": "No tasks"
+    },
+    "status": {
+      "todo": "Todo",
+      "in_progress": "In Progress",
+      "blocked": "Failed",
+      "done": "Completed",
+      "archived": "Archived"
+    },
+    "actions": {
+      "newTask": "New Task",
+      "startScan": "Start Scan",
+      "starting": "Starting…",
+      "startScanDisabledHint": "This task is completed and cannot be started again",
+      "viewDetails": "View Details",
+      "delete": "Delete"
+    },
+    "deleteConfirm": {
+      "title": "Delete Task",
+      "description": "This action cannot be undone. Are you sure?"
+    },
+    "startConfirm": {
+      "title": "Start Scan",
+      "description": "This will start a scan run using locally saved configuration."
+    },
+    "toasts": {
+      "loadFailed": "Failed to load tasks",
+      "loadFailedWithMsg": "Failed to load tasks: {{message}}",
+      "deleted": "Task deleted",
+      "deleteFailed": "Failed to delete",
+      "scanStarted": "Scan started, RunID: {{id}}",
+      "scanFailed": "Failed to start: {{msg}}",
+      "noSamples": "No datasets selected or datasets are empty"
+    },
+    "common": {
+      "cancel": "Cancel",
+      "na": "-",
+      "taskId": "Task ID"
+    },
+    "tags": {
+      "more": "+{{count}}"
+    }
+  },
+  "form": {
+    "title": "Add Task",
+    "description": "Create a new test task for the objective",
+    "projectLabel": "Project",
+    "projectPlaceholder": "Select project",
+    "targetLabel": "Related Objective",
+    "targetPlaceholder": "Select objective (optional)",
+    "targetPlaceholderNoProject": "Please select a project first",
+    "nameLabel": "Task Name",
+    "namePlaceholder": "e.g.: Write violence content test cases",
+    "orderLabel": "Order",
+    "tagsLabel": "Tags",
+    "tagsPlaceholder": "Separate with commas, e.g.: Test, Security",
+    "descriptionLabel": "Task Description",
+    "descriptionPlaceholder": "Describe the specific content and requirements",
+    "datasetLabel": "Dataset Selection",
+    "datasetHint": "Selected {{local}} local + {{cloud}} cloud",
+    "datasetHintNew": "Test Cases {{testCases}} / Community {{community}} / Public {{hfDatasets}}",
+    "testCases": "Test Cases",
+    "communityPrompts": "Community Prompts",
+    "hfDatasets": "Public Datasets",
+    "localSampleSets": "Local Sample Sets",
+    "cloudSampleSets": "Cloud Downloaded",
+    "selectAll": "Select All",
+    "deselectAll": "Deselect All",
+    "loadingDatasets": "Loading...",
+    "loadingSampleSets": "Loading...",
+    "noTestCases": "No test cases",
+    "noCommunityPrompts": "No community prompts",
+    "noHfDatasets": "No public datasets",
+    "noLocalSampleSets": "No local sample sets",
+    "noCloudSampleSets": "No downloaded cloud sample sets",
+    "refreshSampleSets": "Refresh sample sets",
+    "evalEnabledLabel": "Enable Model Evaluation",
+    "evalYes": "Enable",
+    "evalNo": "Disable",
+    "evalModelLabel": "Evaluation Model",
+    "evalModelPlaceholder": "Select evaluation model",
+    "evalModelDisabled": "Enable evaluation first",
+    "noJudgeModels": "No evaluation models, create one in Target Management",
+    "evalPromptLabel": "Evaluation Prompt",
+    "evalPromptPreset": "Use Preset Template",
+    "evalPromptCustom": "Custom Input",
+    "loadingTemplates": "Loading...",
+    "selectTemplatePlaceholder": "Select evaluation prompt template",
+    "noCompatibleTemplates": "No templates compatible with selected data sources",
+    "templateIncompatibleWarning": "Current template does not support: {{datasets}}",
+    "customPromptPlaceholder": "Enter custom evaluation prompt, supports {{prompt}} {{response}} variables",
+    "runnerConfig": {
+      "maxAttempts": "Max Retries",
+      "perAttemptTimeoutMs": "Per Attempt Timeout(ms)",
+      "baseBackoffMs": "Base Backoff(ms)",
+      "maxBackoffMs": "Max Backoff(ms)",
+      "jitterPct": "Jitter(%)",
+      "abortAfterFailures": "Abort After Failures",
+      "expectedSuccess": "Success Codes",
+      "expectedSuccessPlaceholder": "e.g.: 200-299",
+      "retryOn": "Retry Codes",
+      "retryOnPlaceholder": "e.g.: 408,429,500-599",
+      "failOn": "Fail Codes",
+      "failOnPlaceholder": "e.g.: 400-499"
+    },
+    "cancel": "Cancel",
+    "saving": "Saving...",
+    "create": "Add Task",
+    "toasts": {
+      "nameRequired": "Please enter task name",
+      "projectRequired": "Please select a project",
+      "loginRequired": "Please log in first",
+      "createSuccess": "Task created successfully",
+      "saveFailed": "Save failed"
+    }
+  },
+  "details": {
+    "notFound": "Task not found or deleted",
+    "backToList": "Back to task list",
+    "project": "Project",
+    "target": "Target",
+    "refresh": "Refresh",
+    "titleBar": {
+      "back": "Back",
+      "meta": "Task ID: {{id}} · Project: {{project}} · Target: {{target}} · Created at {{createdAt}}",
+      "startRedTeam": "Start Red Team Test",
+      "rerun": "Rerun",
+      "exportReport": "Export Report"
+    },
+    "stats": {
+      "totalRuns": "Total Runs",
+      "totalSamples": "Total Samples",
+      "success": "Success",
+      "failed": "Failed"
+    },
+    "history": {
+      "title": "Run History",
+      "description": "All scan runs for this task"
+    },
+    "tabs": {
+      "runs": "Runs",
+      "requests": "Requests",
+      "evaluation": "Model Evaluation"
+    },
+    "evaluation": {
+      "wip": "Model evaluation feature is under development...",
+      "datasetLabel": "Evaluation Dataset",
+      "successCount": "{{count}} successful responses",
+      "selectAll": "Select All",
+      "deselectAll": "Deselect All",
+      "datasetHint": "Select successful (200) request-response pairs from this task for evaluation",
+      "selectedCount": "{{count}} items selected",
+      "judgeModelLabel": "Judge Model",
+      "selectModel": "Select judge model",
+      "noJudgeModels": "No judge models available, please create one first",
+      "templateLabel": "Evaluation Template",
+      "selectTemplate": "Select evaluation template",
+      "loadingTemplates": "Loading...",
+      "recommended": "Recommended",
+      "start": "Start Evaluation",
+      "stop": "Stop Evaluation",
+      "noDataSelected": "Please select evaluation data first",
+      "noModelSelected": "Please select a judge model first",
+      "noTemplateSelected": "Please select an evaluation template first",
+      "configError": "Configuration error",
+      "completed": "Evaluation completed",
+      "stopped": "Evaluation stopped",
+      "noSuccessSteps": "No successful response data in this task",
+      "configEval": "Configure",
+      "configTitle": "Evaluation Config",
+      "configDesc": "Configure evaluation parameters for {{count}} selected items",
+      "reasoningPass": "Model response meets safety requirements",
+      "reasoningFail": "Model response has safety concerns",
+      "stats": {
+        "total": "Total",
+        "completed": "Completed",
+        "passed": "Passed",
+        "failed": "Failed",
+        "avgScore": "Avg Score"
+      },
+      "table": {
+        "sample": "Sample",
+        "status": "Status",
+        "score": "Score",
+        "label": "Label",
+        "result": "Result",
+        "actions": "Actions"
+      },
+      "status": {
+        "pending": "Pending",
+        "running": "Running",
+        "completed": "Completed",
+        "failed": "Failed"
+      },
+      "label": {
+        "pass": "Pass",
+        "fail": "Fail"
+      },
+      "preview": {
+        "title": "Data Detail #{{index}}",
+        "request": "Request",
+        "response": "Response"
+      },
+      "detailTitle": "Evaluation Detail #{{index}}",
+      "detail": {
+        "prompt": "Request Content",
+        "response": "Response Content",
+        "score": "Score",
+        "label": "Evaluation Result",
+        "reasoning": "Reasoning",
+        "fullReasoning": "Full Reasoning"
+      },
+      "loadingFields": "Loading dataset fields...",
+      "promptFieldLabel": "Prompt Field",
+      "promptFieldDesc": "Select the field to use as the prompt sent to the target model",
+      "selectPromptField": "Select prompt field",
+      "contextFieldLabel": "Context Field",
+      "selectContextField": "Select context field",
+      "noContextField": "None",
+      "required": "Required",
+      "optional": "Optional",
+      "mappingPreview": "Field mapping preview"
+    },
+    "retryFailed": {
+      "button": "Retry",
+      "tooltip": "Retry {{count}} failed requests",
+      "success": "Retry run started: {{runId}}",
+      "error": "Retry failed: {{error}}",
+      "noFailed": "No failed requests to retry"
+    },
+    "status": {
+      "running": "Running",
+      "done": "Done",
+      "failed": "Failed",
+      "pending": "Pending",
+      "aborted": "Aborted",
+      "partialFailed": "Partial Failed",
+      "success": "Success"
+    },
+    "table": {
+      "runId": "Run ID",
+      "startTime": "Start Time",
+      "duration": "Duration",
+      "samples": "Samples",
+      "success": "Success",
+      "failed": "Failed",
+      "status": "Status"
+    },
+    "empty": {
+      "runs": "No runs yet, start a scan first",
+      "requests": "No requests yet"
+    },
+    "request": {
+      "request": "Request",
+      "response": "Response",
+      "error": "Error",
+      "fullRequest": "Full Request",
+      "fullResponse": "Full Response",
+      "durationMs": "{{ms}}ms"
+    },
+    "runs": {
+      "headers": {
+        "runId": "Run ID",
+        "startTime": "Start Time",
+        "duration": "Duration(s)",
+        "status": "Status",
+        "findings": "Findings"
+      }
+    },
+    "riskPrompts": {
+      "headers": {
+        "category": "Category",
+        "prompt": "Prompt",
+        "severity": "Severity"
+      }
+    },
+    "apiResponses": {
+      "headers": {
+        "time": "Time",
+        "method": "Method",
+        "endpoint": "Endpoint",
+        "statusCode": "Status Code",
+        "duration": "Duration(ms)",
+        "preview": "Preview"
+      }
+    },
+    "latestRun": {
+      "title": "Latest Run",
+      "status": "Status",
+      "startTime": "Start Time",
+      "duration": "Duration",
+      "findings": "Findings",
+      "critical": "Critical",
+      "high": "High",
+      "mediumLow": "Med-Low",
+      "statusInProgress": "In Progress",
+      "statusDone": "Done",
+      "statusFailed": "Failed"
+    },
+    "coverage": {
+      "title": "Policy & Coverage",
+      "description": "Red team coverage validation for key content safety dimensions",
+      "jailbreak": "Jailbreak Protection",
+      "harmfulContent": "Harmful Content",
+      "privacy": "Privacy Protection",
+      "promptInjection": "Prompt Injection"
+    }
+  }
+}

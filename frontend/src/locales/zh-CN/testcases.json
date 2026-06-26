@@ -1,0 +1,362 @@
+{
+  "table": {
+    "headers": {
+      "category": "分类/子类",
+      "prompt": "Prompt",
+      "plan": "计划",
+      "lang": "语言",
+      "version": "版本",
+      "createdAt": "创建时间",
+      "actions": "操作"
+    },
+    "notGrouped": "未分组",
+    "upgradeToView": "升级以查看完整 Prompt",
+    "versionDefault": "v1",
+    "view": "查看",
+    "downloaded": "已下载",
+    "update": "更新",
+    "download": "下载"
+  },
+  "pagination": {
+    "summary": "共 {{total}} 条 · 第 {{page}}/{{pageCount}} 页",
+    "prev": "上一页",
+    "next": "下一页"
+  },
+  "filters": {
+    "searchPlaceholder": "搜索 Prompt/输出...",
+    "search": "搜索",
+    "downloaded": "已下载"
+  },
+  "details": {
+    "title": "样本详情",
+    "primaryCategory": "主分类",
+    "secondaryCategory": "子分类",
+    "prompt": "Prompt",
+    "expectedOutput": "预期输出",
+    "lang": "语言",
+    "version": "版本",
+    "minPlan": "最低计划",
+    "createdAt": "创建时间"
+  },
+  "categories": {
+    "all": "全部",
+    "groups": {
+      "personal-safety": "人身安全",
+      "illegal": "违法违规",
+      "misinformation": "信息误导",
+      "privacy-ip": "隐私版权",
+      "behavior": "行为规范",
+      "other": "其他"
+    },
+    "items": {
+      "violence": {
+        "name": "暴力 / 危害他人",
+        "description": "描述性暴力、血腥描写、虐待与折磨、制造/使用武器、袭击、绑架、家暴"
+      },
+      "self-harm": {
+        "name": "自伤 / 自杀 / 危害自身",
+        "description": "自杀方法、鼓励自残、饮食失调等"
+      },
+      "sexual": {
+        "name": "性与裸露",
+        "description": "成人性描写、性服务招揽、色情诱导、未成年人性相关（CSAM）（高度敏感，必须零容忍）"
+      },
+      "hate-harassment": {
+        "name": "仇恨 / 骚扰 / 霸凌",
+        "description": "针对受保护群体的仇恨言论、去人性化、人身攻击、跟踪骚扰、辱骂"
+      },
+      "terrorism": {
+        "name": "恐怖主义 / 极端主义",
+        "description": "宣传、招募、赞颂暴力活动、制作煽动性材料的实操指南"
+      },
+      "illegal-activities": {
+        "name": "违法与危险活动",
+        "description": "制造/购买违禁品（枪支、毒品、爆炸物）、黑客入侵、诈骗、盗刷、伪造证件、绕过付费墙"
+      },
+      "biosafety": {
+        "name": "生物安全 / 化学安全",
+        "description": "病原体培养、增毒、扩散路线、有毒化学品/爆炸物的配方与放大步骤"
+      },
+      "cybersecurity": {
+        "name": "网络安全 / 恶意软件",
+        "description": "编写利用程序、勒索/木马、零日利用细节、绕过安全产品、社工话术模板"
+      },
+      "health-misinfo": {
+        "name": "医疗与健康误导",
+        "description": "诊断/处方/替代疗法的错误建议、反疫苗/伪科学疗法的错误宣称"
+      },
+      "legal-finance": {
+        "name": "法律与金融建议",
+        "description": "具体法律意见、逃税/洗钱指南、投资/交易建议、内幕提示、虚假财务建议"
+      },
+      "misinfo": {
+        "name": "虚假信息 / 操纵",
+        "description": "捏造事实、伪造引文、医疗/选举错误信息、协助造谣、操纵舆论、协同水军"
+      },
+      "political": {
+        "name": "政治敏感与选举完整性",
+        "description": "定向劝诱投票、压制投票、政见操控脚本、海外影响行动、国家级宣传协助"
+      },
+      "privacy-pii": {
+        "name": "隐私与个人数据",
+        "description": "收集、推断、泄露个人敏感信息、人肉搜索、定位、刷库合并"
+      },
+      "copyright": {
+        "name": "版权与知识产权",
+        "description": "盗版下载链接、规避DRM、批量抓取付费内容、未经许可的长篇受版权文本输出"
+      },
+      "addiction": {
+        "name": "成瘾与不良嗜好",
+        "description": "赌博诱导、烟酒/毒品滥用的鼓励与教程"
+      },
+      "academic-misconduct": {
+        "name": "工作场所与学术不端",
+        "description": "代写、考试作弊、抄袭/改写绕检、KPI 造假、验收舞弊"
+      },
+      "commercial-abuse": {
+        "name": "商业不当与平台滥用",
+        "description": "垃圾信息（Spam）、SEO 作恶、刷榜、刷评、自动化滥用（批量注册、薅券脚本）"
+      },
+      "age-inappropriate": {
+        "name": "年龄不当内容",
+        "description": "向未成年人展示不宜内容、引导不恰当互动"
+      },
+      "multimodal": {
+        "name": "图像/多模态特有",
+        "description": "深度伪造（Deepfake）、以假乱真、血腥画面、裸露检测、面部与车牌可识别信息"
+      },
+      "cultural-ethical": {
+        "name": "文化与伦理敏感",
+        "description": "宗教/民族禁忌冒犯、灾难幸灾乐祸、身心障碍刻板印象与歧视"
+      }
+    }
+  },
+  "library": {
+    "copyTitle": "{{title}}（副本）",
+    "breadcrumb": "测试用例库",
+    "pageTitle": "测试用例库",
+    "pageDesc": "按风险分类管理测试用例",
+    "selectCategory": "选择风险分类",
+    "searchCategory": "搜索分类...",
+    "noCategoryFound": "未找到匹配的分类",
+    "localCount": "本地数据",
+    "actions": {
+      "newCase": "新建用例",
+      "generate": "生成样本",
+      "view": "查看",
+      "edit": "编辑",
+      "copy": "复制",
+      "enable": "启用",
+      "disable": "停用",
+      "delete": "删除"
+    },
+    "table": {
+      "headers": {
+        "title": "标题",
+        "summary": "摘要",
+        "severity": "严重程度",
+        "status": "状态",
+        "actions": "操作"
+      },
+      "emptyByCategory": "{{name}}下暂无测试用例"
+    },
+    "severity": {
+      "critical": "严重",
+      "high": "高",
+      "medium": "中",
+      "low": "低"
+    },
+    "status": {
+      "active": "激活",
+      "inactive": "未激活"
+    },
+    "toasts": {
+      "loadFailed": "加载测试用例失败",
+      "loadFailedWithMsg": "加载测试用例失败：{{message}}",
+      "deleted": "测试用例已删除",
+      "deleteFailed": "删除失败",
+      "toggledOn": "已启用",
+      "toggledOff": "已停用",
+      "copySuccess": "已复制",
+      "copyFailed": "复制失败",
+      "pleaseLogin": "请先登录"
+    },
+    "deleteDialog": {
+      "title": "确认删除测试用例",
+      "description": "删除后测试用例数据将无法恢复。确定要继续吗？"
+    }
+  },
+  "variables": {
+    "breadcrumb": {
+      "parent": "测试管理",
+      "current": "变量管理"
+    },
+    "pageTitle": "变量管理",
+    "pageDesc": "用于在样本与请求模板中通过 {{name}} 进行替换",
+    "loading": "加载中...",
+    "actions": {
+      "new": "新建变量"
+    },
+    "table": {
+      "headers": {
+        "name": "名称",
+        "value": "值",
+        "status": "状态",
+        "description": "描述",
+        "updatedAt": "更新时间"
+      },
+      "empty": "暂无变量"
+    },
+    "status": {
+      "enabled": "启用",
+      "disabled": "停用"
+    },
+    "sensitive": "敏感",
+    "dialog": {
+      "title": "新建变量",
+      "description": "创建可在样本与请求模板中通过 {{name}} 使用的替换变量。",
+      "fields": {
+        "name": "名称",
+        "value": "值",
+        "status": "状态",
+        "description": "描述"
+      },
+      "create": "创建"
+    },
+    "toasts": {
+      "loadFailedWithMsg": "加载变量失败：{{message}}",
+      "nameRequired": "请填写变量名称",
+      "valueRequired": "请填写变量值",
+      "pleaseLogin": "请先登录",
+      "created": "已创建变量",
+      "createFailedWithMsg": "创建失败：{{message}}"
+    }
+  },
+  "localSets": {
+    "breadcrumb": {
+      "parent": "测试管理",
+      "current": "本地样本库"
+    },
+    "pageTitle": "本地样本库",
+    "pageDesc": "浏览已保存到本地数据库的样本",
+    "table": {
+      "headers": {
+        "title": "标题",
+        "promptPreview": "Prompt 预览",
+        "key": "键名",
+        "actions": "操作"
+      },
+      "empty": "暂无数据",
+      "untitled": "未命名"
+    },
+    "actions": {
+      "delete": "删除"
+    },
+    "toasts": {
+      "loadFailed": "加载本地样本失败：{{message}}",
+      "deleted": "已删除",
+      "deleteFailed": "删除失败：{{message}}"
+    }
+  },
+  "setsStore": {
+    "breadcrumb": {
+      "parent": "测试管理",
+      "current": "样本集"
+    },
+    "pageTitle": "核心样本",
+    "pageDesc": "从云端同步获取样本，按分类筛选",
+    "selectStage": "选择阶段",
+    "allStages": "全部",
+    "selectVendor": "选择厂商",
+    "allVendors": "全部厂商",
+    "selectLv1": "选择一级分类",
+    "selectLv2": "选择二级分类",
+    "allCategories": "全部一级分类",
+    "allSubCategories": "全部二级分类",
+    "searchPlaceholder": "搜索 Prompt/输出...",
+    "loading": "正在加载...",
+    "empty": "暂无数据",
+    "loadFailed": "加载数据失败",
+    "loadFailedWithMsg": "加载数据失败：{{message}}",
+    "loadCategoriesFailed": "加载分类失败",
+    "loadCategoriesFailedWithMsg": "加载分类失败：{{message}}",
+    "loadLocalFailed": "加载本地样本失败",
+    "loadLocalFailedWithMsg": "加载本地样本失败：{{message}}",
+    "downloadSuccess": "已保存到本地数据库",
+    "downloadFailed": "保存失败",
+    "downloadFailedWithMsg": "保存失败：{{message}}",
+    "viewLocalSets": "查看本地样本库",
+    "noPermission": "权限不足，无法查看或下载此内容",
+    "noPermViewContent": "当前计划（{{plan}}）无权查看该内容，需要 {{minPlan}} 或更高。",
+    "noPermDownloadContent": "当前计划（{{plan}}）无权下载该内容，需要 {{minPlan}} 或更高。",
+    "noAccessHint": "您没有访问此内容的权限",
+    "noAccessMessage": "抱歉，您当前没有访问云端样本的权限。请联系管理员获取授权。",
+    "detailsTitle": "样本详情",
+    "promptText": "Prompt 内容",
+    "expectedOutput": "预期输出",
+    "table": {
+      "stage": "阶段",
+      "category": "分类",
+      "mutation": "变异",
+      "loader": "加载器",
+      "promptText": "Prompt 内容",
+      "expectedOutput": "预期输出",
+      "actions": "操作"
+    },
+    "detail": {
+      "stage": "阶段",
+      "mutation": "变异方法",
+      "loader": "加载器",
+      "lang": "语言",
+      "finalPrompt": "最终 Prompt",
+      "promptHash": "Prompt Hash",
+      "fatherHash": "父级 Hash",
+      "riskLevel": "风险等级"
+    }
+  },
+  "form": {
+    "createTitle": "新建测试用例",
+    "editTitle": "编辑测试用例",
+    "createDesc": "创建新的安全测试用例",
+    "editDesc": "修改测试用例信息",
+    "categoryLabel": "风险分类",
+    "severityLabel": "风险等级",
+    "titleLabel": "用例标题",
+    "titlePlaceholder": "例如：直接暴力描述测试",
+    "contentLabel": "测试内容",
+    "contentPlaceholder": "输入测试提示词或场景描述",
+    "contentHint": "将用于测试 LLM 模型的输入内容，支持使用 {{变量名}} 进行变量替换",
+    "detectedVars": "检测到变量",
+    "generateSamples": "生成样本",
+    "untitledTestCase": "未命名用例",
+    "expectedLabel": "预期响应",
+    "expectedPlaceholder": "描述预期的安全响应或拒绝行为",
+    "expectedHint": "模型应该如何安全地处理这个测试用例",
+    "statusLabel": "状态",
+    "tagsLabel": "标签",
+    "tagsPlaceholder": "用逗号分隔",
+    "cancel": "取消",
+    "saving": "保存中...",
+    "create": "创建用例",
+    "save": "保存更改",
+    "severity": {
+      "low": "低",
+      "medium": "中",
+      "high": "高",
+      "critical": "严重"
+    },
+    "status": {
+      "active": "启用",
+      "inactive": "禁用"
+    },
+    "toasts": {
+      "titleRequired": "请填写用例标题",
+      "contentRequired": "请填写用例内容",
+      "loginRequired": "请先登录",
+      "loadFailed": "加载测试用例信息失败",
+      "updateSuccess": "测试用例更新成功",
+      "createSuccess": "测试用例创建成功",
+      "saveFailed": "保存失败"
+    }
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "breadcrumb": "账户设置",
+  "combined": {
+    "title": "账户与安全",
+    "desc": "管理您的个人信息和账户安全设置"
+  },
+  "profile": {
+    "title": "个人信息",
+    "desc": "管理您的账户信息",
+    "name": "用户名",
+    "email": "邮箱",
+    "emailHint": "邮箱地址不可修改",
+    "userId": "用户 ID",
+    "systemIdHint": "系统生成的唯一标识",
+    "save": "保存更改"
+  },
+  "plan": {
+    "title": "订阅计划",
+    "desc": "当前订阅状态和使用限制",
+    "current": "当前计划",
+    "upgrade": "升级计划",
+    "name": {
+      "trial": "试用版",
+      "pro": "Pro 版",
+      "team": "团队版"
+    },
+    "limits": {
+      "trial": "最多 {{projects}} 个项目，{{tests}} 次/月测试",
+      "pro": "无限项目，{{tests}} 次/月测试",
+      "team": "无限项目，{{tests}} 次/月测试，多用户协作"
+    },
+    "usage": {
+      "testsUsed": "本月已使用测试次数",
+      "activeProjects": "活跃项目数",
+      "countOf": "{{used}} / {{limit}}",
+      "unlimited": "无限制"
+    }
+  },
+  "planDialog": {
+    "subtitle": "查看您的订阅详情和用量统计",
+    "clickToView": "点击查看详情",
+    "testsRemaining": "剩余 {{count}} 次测试",
+    "billingCycle": "计费周期",
+    "daysRemaining": "剩余 {{days}} 天",
+    "renewalDate": "续费日期"
+  },
+  "security": {
+    "title": "安全设置",
+    "desc": "管理账户安全选项",
+    "currentPassword": "当前密码",
+    "newPassword": "新密码",
+    "confirmPassword": "确认新密码",
+    "changePassword": "修改密码"
+  },
+  "upgradeDialog": {
+    "title": "升级到 Pro 版本",
+    "description": "选择适合您的计划，解锁更多功能",
+    "proPlan": {
+      "title": "Pro 版本",
+      "badge": "推荐",
+      "description": "适合个人开发者和小团队",
+      "price": "¥299",
+      "period": "/月",
+      "features": [
+        "无限项目数量",
+        "10,000 次/月 测试次数",
+        "支持所有 LLM 模型",
+        "高级分析报告",
+        "邮件支持"
+      ],
+      "upgradeButton": "立即升级"
+    },
+    "teamPlan": {
+      "title": "团队版本",
+      "description": "适合企业和大型团队",
+      "price": "¥999",
+      "period": "/月",
+      "features": [
+        "Pro 版所有功能",
+        "100,000 次/月 测试次数",
+        "多用户协作",
+        "自定义测试场景",
+        "优先技术支持",
+        "SLA 保障"
+      ],
+      "contactButton": "联系销售"
+    }
+  }
+}

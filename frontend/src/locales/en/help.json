@@ -1,0 +1,11 @@
+{
+  "toast": {
+    "loading": "Loading cloud data...",
+    "success": "Data loaded successfully",
+    "error": "Failed to load data"
+  },
+  "errors": {
+    "invalidFormat": "Invalid data format: expected array",
+    "loadFailed": "Failed to load:"
+  }
+}

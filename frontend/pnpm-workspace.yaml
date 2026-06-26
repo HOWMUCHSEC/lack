@@ -1,0 +1,11 @@
+allowBuilds:
+  '@sentry/cli': true
+  esbuild: true
+overrides:
+  '@types/node': 22.20.0
+  use-sync-external-store: ^1.6.0
+onlyBuiltDependencies:
+  - '@sentry/cli'
+  - core-js
+  - esbuild
+  - sharp

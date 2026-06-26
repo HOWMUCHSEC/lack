@@ -1,0 +1,249 @@
+{
+  "pageTitle": "所有报告",
+  "pageDesc": "查看和管理所有评测报告",
+  "selectProject": "选择项目",
+  "selectTargetModel": "目标模型",
+  "noTargetModels": "该项目没有关联的目标模型",
+  "reportPrefix": "报告",
+  "reportId": "报告 ID",
+  "evaluationScore": "评测分数",
+  "scoreLabel": "分数: {{score}}",
+  "emptyHint": "生成新报告以查看评测结果。",
+  "allTab": "全部",
+  "loading": "加载中...",
+  "table": {
+    "headers": {
+      "name": "报告名称",
+      "project": "所属项目",
+      "status": "状态",
+      "createdAt": "创建时间",
+      "actions": "操作"
+    },
+    "empty": "暂无报告"
+  },
+  "status": {
+    "label": "状态",
+    "pending": "待生成",
+    "generating": "生成中",
+    "completed": "已完成",
+    "failed": "失败"
+  },
+  "actions": {
+    "view": "查看",
+    "export": "导出",
+    "download": "下载PDF",
+    "delete": "删除",
+    "exportPdf": "导出 PDF",
+    "exportMarkdown": "导出 Markdown",
+    "exportJson": "导出 JSON",
+    "exportCsv": "导出 CSV"
+  },
+  "toasts": {
+    "loadFailed": "加载项目失败"
+  },
+  "unified": {
+    "projectTable": {
+      "name": "项目名称",
+      "status": "状态",
+      "createdAt": "创建时间",
+      "actions": "操作"
+    },
+    "riskTable": {
+      "category": "风险类目",
+      "probability": "发生概率",
+      "severity": "影响严重度",
+      "notes": "备注"
+    },
+    "coverageTable": {
+      "category": "风险类目",
+      "modality": "模态",
+      "language": "语言",
+      "conversationType": "会话类型",
+      "caseCount": "用例数"
+    },
+    "caseTable": {
+      "caseId": "Case ID",
+      "category": "类目",
+      "modality": "模态",
+      "language": "语言",
+      "result": "结果",
+      "severity": "严重度"
+    }
+  },
+  "studio": {
+    "riskTable": {
+      "category": "类目",
+      "probability": "发生概率",
+      "severity": "影响严重度",
+      "description": "说明"
+    },
+    "coverageTable": {
+      "category": "类目",
+      "modality": "模态",
+      "language": "语言",
+      "structure": "会话结构",
+      "caseCount": "用例数"
+    },
+    "caseTable": {
+      "caseId": "Case ID",
+      "category": "类目",
+      "modality": "模态",
+      "language": "语言",
+      "conversation": "会话",
+      "result": "结果",
+      "severity": "严重度"
+    }
+  },
+  "dimension": {
+    "title": "维度概览",
+    "description": "多维度测试覆盖情况",
+    "stage": "阶段",
+    "riskPoints": "风险点数",
+    "coverage": "覆盖率",
+    "riskDistribution": "风险分布",
+    "agentPipeline": "Agent管道",
+    "safetyGuards": "安全防护",
+    "modalityCoverage": "模态覆盖"
+  },
+  "detail": {
+    "breadcrumb": "安全评测报告",
+    "export": "导出",
+    "unlock": "解锁报告",
+    "selectProject": "选择项目生成报告",
+    "selectProjectDesc": "从现有项目生成符合标准的安全评测报告",
+    "generate": "生成报告",
+    "backToList": "返回列表",
+    "testWindow": "测试窗口",
+    "kpis": {
+      "violationRate": "违规率",
+      "criticalViolationRate": "严重违规率",
+      "escapeRate": "逃逸率",
+      "blockRate": "阻断率",
+      "guardrailEffectiveness": "守门器有效性",
+      "overallScore": "综合得分"
+    },
+    "tabs": {
+      "overview": "概览",
+      "risk": "风险模型",
+      "coverage": "测试覆盖",
+      "cases": "案例明细",
+      "remediation": "整改计划"
+    },
+    "scope": {
+      "title": "测试范围",
+      "modalities": "覆盖模态",
+      "languages": "测试语言"
+    },
+    "methodology": {
+      "title": "测试方法学",
+      "testTypes": "测试类型：",
+      "judges": "评判器：",
+      "conversationPatterns": "会话模式："
+    },
+    "statistics": {
+      "totalCases": "总用例数",
+      "passed": "通过",
+      "failed": "失败",
+      "blocked": "阻断",
+      "showingFirst": "显示前 {{limit}} 条，共 {{total}} 条记录"
+    },
+    "riskModel": {
+      "title": "威胁矩阵",
+      "desc": "各风险类目的发生概率与影响严重度评估"
+    },
+    "coverageMatrix": {
+      "title": "覆盖矩阵",
+      "desc": "测试用例在不同维度的分布情况"
+    },
+    "caseDetails": {
+      "title": "案例明细",
+      "count": "共 {{count}} 条测试案例记录"
+    },
+    "remediation": {
+      "title": "整改计划",
+      "desc": "基于测试结果的风险整改建议",
+      "topRisks": "Top 风险与整改计划",
+      "topRisksDesc": "需要优先关注和修复的安全风险",
+      "owner": "责任人：",
+      "actions": "整改措施：",
+      "sla": "{{days}} 天内完成",
+      "gates": "发布门禁条件"
+    }
+  },
+  "modelEval": {
+    "title": "模型评测报告",
+    "projectInfo": "项目 {{project}} • 生成于 {{date}}",
+    "summary": {
+      "overallScore": "综合评分",
+      "excellent": "优秀",
+      "good": "良好",
+      "average": "一般",
+      "poor": "较差",
+      "totalTests": "测试总数",
+      "passRate": "通过率",
+      "avgResponseTime": "平均响应时间"
+    },
+    "security": {
+      "title": "安全扫描结果",
+      "mcp": "MCP 安全",
+      "infra": "AI 基础设施",
+      "cloud": "AI 云安全",
+      "status": {
+        "secure": "安全",
+        "warning": "警告",
+        "danger": "危险"
+      },
+      "findings": "发现问题：{{count}}",
+      "vulnerabilities": "漏洞：{{count}}",
+      "critical": "严重：{{count}}",
+      "riskLevel": "风险等级：{{level}}",
+      "threats": "威胁：{{count}}"
+    },
+    "evaluation": {
+      "title": "模型评测结果",
+      "taskMetrics": "任务完成指标",
+      "performance": "性能评分",
+      "sampleCoverage": "样本覆盖率",
+      "covered": "覆盖率 {{rate}}% ({{covered}} / {{total}})",
+      "table": {
+        "taskName": "任务名称",
+        "total": "总数",
+        "completed": "完成",
+        "successRate": "成功率"
+      }
+    },
+    "testCases": {
+      "title": "测试用例结果",
+      "executionSummary": "执行摘要",
+      "variableValidation": "变量验证结果",
+      "table": {
+        "testId": "测试 ID",
+        "description": "描述",
+        "status": "状态",
+        "time": "耗时"
+      },
+      "validation": {
+        "input": "输入验证",
+        "output": "输出格式",
+        "schema": "Schema 合规性"
+      }
+    },
+    "quickStats": {
+      "title": "快速统计",
+      "passRateLabel": "通过率",
+      "peakMemory": "峰值内存",
+      "avgGpuUtil": "平均 GPU 利用率",
+      "throughput": "吞吐量",
+      "errorRate": "错误率"
+    },
+    "research": {
+      "title": "研究洞察",
+      "referencedPapers": "引用论文 {{count}} 篇",
+      "keyFindings": "关键发现"
+    },
+    "widgets": {
+      "moreComing": "更多组件即将推出..."
+    },
+    "footer": "由 Lanlyzer 评测引擎生成 • {{date}}"
+  }
+}

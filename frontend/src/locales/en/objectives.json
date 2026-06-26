@@ -1,0 +1,197 @@
+{
+  "pageTitle": "Model Templates",
+  "pageDesc": "Quickly create standardized model scenarios",
+  "table": {
+    "headers": {
+      "name": "Model Name",
+      "description": "Description",
+      "tags": "Tags",
+      "usageCount": "Usage Count",
+      "actions": "Actions"
+    },
+    "empty": "No models"
+  },
+  "allObjectives": {
+    "newModel": "New Model",
+    "loading": "Loading...",
+    "searchPlaceholder": "Search models...",
+    "empty": "No models yet, click \"New Model\" to create your first model",
+    "deleteDialog": {
+      "title": "Confirm Delete Model",
+      "description": "Model data cannot be recovered after deletion. Are you sure you want to continue?"
+    },
+    "table": {
+      "headers": {
+        "name": "Model Name",
+        "project": "Project",
+        "status": "Status",
+        "order": "Order",
+        "tags": "Tags",
+        "createdAt": "Created At",
+        "purpose": "Category",
+        "actions": "Actions"
+      }
+    }
+  },
+  "templates": {
+    "table": {
+      "headers": {
+        "name": "Template Name",
+        "category": "Risk Category",
+        "description": "Description",
+        "usageCount": "Usage Count",
+        "actions": "Actions"
+      }
+    },
+    "usage": "{{count}} uses",
+    "searchPlaceholder": "Search templates...",
+    "noDesc": "No description provided."
+  },
+  "actions": {
+    "newTemplate": "New Model",
+    "newTemplateBtn": "New Template",
+    "useTemplate": "Use Template",
+    "view": "View",
+    "edit": "Edit",
+    "delete": "Delete"
+  },
+  "list": {
+    "actions": {
+      "view": "View",
+      "edit": "Edit",
+      "delete": "Delete"
+    }
+  },
+  "dialog": {
+    "createTitle": "New Model Template",
+    "editTitle": "Edit Template",
+    "description": "Create reusable model templates",
+    "nameLabel": "Template Name",
+    "namePlaceholder": "e.g.: Standard Security Test Model",
+    "descriptionLabel": "Template Description",
+    "descriptionPlaceholder": "Describe the purpose and test scenarios included in this template",
+    "tagsLabel": "Tags",
+    "tagsPlaceholder": "Separate with commas",
+    "cancel": "Cancel",
+    "create": "Create Template",
+    "save": "Save Changes"
+  },
+  "deleteDialog": {
+    "title": "Confirm Delete Template",
+    "description": "Template data cannot be recovered after deletion. Are you sure you want to continue?"
+  },
+  "toast": {
+    "loadError": "Failed to load template",
+    "deleteSuccess": "Template deleted",
+    "deleteFailed": "Delete failed",
+    "nameRequired": "Please fill in the template name",
+    "loginRequired": "Please log in first",
+    "updateSuccess": "Template updated successfully",
+    "createSuccess": "Template created successfully",
+    "saveFailed": "Save failed"
+  },
+  "form": {
+    "createTitle": "Create Model",
+    "editTitle": "Edit Model",
+    "createDesc": "Create a new model for the project (API endpoint configuration)",
+    "editDesc": "Modify model information",
+    "projectLabel": "Project",
+    "projectPlaceholder": "Select project",
+    "statusLabel": "Status",
+    "orderLabel": "Order",
+    "nameLabel": "Model Name",
+    "purposeLabel": "Purpose",
+    "purpose": {
+      "target": "Target Model",
+      "judge": "Judge Model"
+    },
+    "namePlaceholder": "e.g.: Violence Detection",
+    "tagsLabel": "Tags",
+    "tagsPlaceholder": "Separate with commas, e.g.: Security, Baseline",
+    "apiConfig": "API Configuration",
+    "apiConfigDesc": "Template will save request method, timeout, headers and body defaults",
+    "testConnection": "Test Connection",
+    "testing": "Testing...",
+    "apiUrlLabel": "API URL",
+    "apiUrlPlaceholder": "https://api.openai.com/v1/chat/completions",
+    "apiUrlHint": "OpenAI API-compatible endpoint address",
+    "apiTokenLabel": "API Token",
+    "apiTokenPlaceholder": "sk-...",
+    "methodLabel": "Request Method",
+    "methodPlaceholder": "Select method",
+    "methods": {
+      "GET": "GET",
+      "POST": "POST",
+      "PUT": "PUT",
+      "PATCH": "PATCH",
+      "DELETE": "DELETE"
+    },
+    "timeoutLabel": "Timeout (seconds)",
+    "timeoutPlaceholder": "5",
+    "headersLabel": "Request Headers Template (JSON)",
+    "headersPlaceholder": "{\"Content-Type\": \"application/json\"}",
+    "bodyLabel": "Request Body Template (JSON)",
+    "bodyPlaceholder": "{\"model\": \"gpt-4\", \"messages\": []}",
+    "formatJson": "Validate & Format",
+    "advanced": "Advanced Options",
+    "hideAdvanced": "Hide Advanced Options",
+    "help": "Help",
+    "helpDialog": {
+      "headersTitle": "Request Headers Help",
+      "headersDesc": "",
+      "bodyTitle": "Request Body Template Help",
+      "bodyDesc": "",
+      "requestFieldTitle": "Request Field Path Help",
+      "requestFieldDesc": "",
+      "responseFieldTitle": "Response Field Path Help",
+      "responseFieldDesc": ""
+    },
+    "requestFieldLabel": "Request Field Path",
+    "requestFieldPlaceholder": "messages[0].content",
+    "requestFieldHint": "Sample will be inserted into this field, supports dot notation like messages[0].content",
+    "responseFieldLabel": "Response Field Path",
+    "responseFieldPlaceholder": "choices[0].message.content",
+    "responseFieldHint": "Extract this field value from response as result, supports dot notation like choices[0].message.content",
+    "modelNameLabel": "Model Name Identifier",
+    "modelNamePlaceholder": "gpt-4o, claude-3.5-sonnet, etc.",
+    "modelNameHint": "Identifies the specific model version used for evaluation",
+    "detailsLabel": "Notes",
+    "detailsPlaceholder": "Describe the purpose and special instructions for this API configuration",
+    "cancel": "Cancel",
+    "saving": "Saving...",
+    "create": "Create Model",
+    "save": "Save Changes",
+    "status": {
+      "planned": "Available",
+      "archived": "Unavailable"
+    },
+    "response": {
+      "title": "API Response",
+      "desc": "Status {{status}}, Time {{time}}ms",
+      "close": "Close",
+      "empty": "Empty response",
+      "unknown": "Unknown",
+      "extractedField": "Extracted Field Value",
+      "fullResponse": "Full Response"
+    },
+    "toasts": {
+      "nameRequired": "Please enter model name",
+      "projectRequired": "Please select a project",
+      "urlRequired": "Please enter API URL",
+      "headersRequired": "Please enter request headers template",
+      "bodyRequired": "Please enter request body template",
+      "requestFieldRequired": "Please enter request field path",
+      "responseFieldRequired": "Please enter response field path",
+      "loginRequired": "Please log in first",
+      "loadFailed": "Failed to load model information",
+      "updateSuccess": "Model updated successfully",
+      "createSuccess": "Model created successfully",
+      "saveFailed": "Save failed",
+      "jsonEmpty": "Content is empty, cannot format",
+      "jsonFormatted": "JSON formatted",
+      "jsonInvalid": "JSON validation failed: {{message}}",
+      "testError": "Request failed: {{message}}",
+      "connectionFailed": "Connection failed, status code {{status}}"
+    }
+  }
+}

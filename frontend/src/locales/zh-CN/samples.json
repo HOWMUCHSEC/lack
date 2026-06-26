@@ -1,0 +1,122 @@
+{
+  "breadcrumb": {
+    "parent": "测试管理",
+    "current": "本地样本集"
+  },
+  "library": {
+    "title": "样本库",
+    "localTab": "本地样本",
+    "communityTab": "核心样本",
+    "publicTab": "社区样本"
+  },
+  "statistics": {
+    "panelTitle": "数据统计概览",
+    "loading": "加载中...",
+    "loadFailed": "加载统计数据失败"
+  },
+  "source": {
+    "generated": "本地生成",
+    "public": "社区样本",
+    "community": "核心样本"
+  },
+  "communityPrompts": {
+    "deleteSuccess": "核心样本已删除",
+    "deleteFailed": "删除失败"
+  },
+  "pageTitle": "本地样本集",
+  "pageDesc": "通过测试用例和变量组合生成的样本，存储在本地数据库中",
+  "searchPlaceholder": "搜索样本集...",
+  "loading": "加载中...",
+  "empty": "暂无本地样本集",
+  "emptyHint": "在测试用例编辑器中使用「生成样本」功能来创建样本集",
+  "sampleCount": "条样本",
+  "actions": {
+    "deleteSet": "删除样本集",
+    "copy": "复制内容"
+  },
+  "table": {
+    "content": "生成内容",
+    "variables": "变量组合",
+    "actions": "操作",
+    "empty": "暂无样本"
+  },
+  "dialog": {
+    "viewTitle": "样本详情",
+    "viewDesc": "查看生成的样本内容和元信息",
+    "generatedContent": "生成内容",
+    "originalTemplate": "原始模板",
+    "variables": "变量",
+    "category": "分类",
+    "severity": "等级",
+    "testCase": "测试用例",
+    "deleteTitle": "确认删除样本集",
+    "deleteDesc": "删除后样本集及其所有样本将无法恢复。确定要继续吗？",
+    "deleteSampleTitle": "确认删除样本",
+    "deleteSampleDesc": "删除后该样本将无法恢复。确定要继续吗？"
+  },
+  "toasts": {
+    "loadFailed": "加载样本集失败",
+    "loadSamplesFailed": "加载样本失败",
+    "deleteSuccess": "样本集已删除",
+    "deleteFailed": "删除失败",
+    "copied": "已复制到剪贴板",
+    "sampleDeleted": "样本已删除",
+    "sampleDeleteFailed": "删除样本失败"
+  },
+  "generator": {
+    "title": "生成样本",
+    "description": "基于测试用例模板和变量生成多个样本，样本将存储在本地数据库中",
+    "noPlaceholders": "测试用例内容中未检测到变量占位符（{{变量名}}格式）",
+    "detectedVariables": "检测到的变量",
+    "matched": "已匹配",
+    "valuesLabel": "变量值（每个值生成一条样本）",
+    "valuePlaceholder": "输入变量值",
+    "setNameLabel": "样本集名称",
+    "setNamePlaceholder": "默认：自动生成 - {{title}}",
+    "setDescLabel": "描述（可选）",
+    "setDescPlaceholder": "输入样本集描述",
+    "willGenerate": "将生成 {{count}} 条样本",
+    "generating": "生成中...",
+    "generate": "生成样本",
+    "toasts": {
+      "noVariables": "请至少选择一个变量并填写值",
+      "success": "成功生成 {{count}} 条样本",
+      "failed": "生成样本失败"
+    }
+  },
+  "publicDatasets": {
+    "pageTitle": "社区样本",
+    "pageDesc": "来自 Hugging Face 的公开安全评测数据集，可下载到本地使用",
+    "loading": "加载中...",
+    "empty": "暂无可用的社区样本",
+    "loadFailed": "加载数据集列表失败",
+    "datasetName": "数据集名称",
+    "rowCount": "数据量",
+    "split": "划分",
+    "config": "配置",
+    "download": "下载",
+    "downloaded": "已下载",
+    "downloadingStatus": "下载中",
+    "available": "可用",
+    "viewOnHfShort": "在 HF 查看",
+    "downloading": "下载中...",
+    "downloadSuccess": "数据集下载成功",
+    "downloadFailed": "下载失败",
+    "previewTitle": "数据预览",
+    "previewFailed": "加载预览失败",
+    "noData": "暂无数据",
+    "previewHint": "仅显示前 {{shown}} 条，共 {{total}} 条",
+    "localTitle": "已下载的数据集",
+    "localDesc": "已下载到本地的社区样本，可离线使用",
+    "localPreviewTitle": "本地数据预览",
+    "downloadedAt": "下载于 {{date}}",
+    "deleteSuccess": "数据集已删除",
+    "deleteFailed": "删除失败",
+    "loadPreview": "加载预览",
+    "hfLink": "HuggingFace 链接",
+    "viewOnHf": "在 HuggingFace 查看",
+    "openUrlTitle": "打开外部链接",
+    "openUrlDesc": "即将在系统浏览器中打开以下链接：",
+    "openInBrowser": "在浏览器中打开"
+  }
+}

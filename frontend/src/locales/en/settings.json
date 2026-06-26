@@ -1,0 +1,89 @@
+{
+  "breadcrumb": "Account Settings",
+  "combined": {
+    "title": "Account & Security",
+    "desc": "Manage your personal information and account security settings"
+  },
+  "profile": {
+    "title": "Profile",
+    "desc": "Manage your account information",
+    "name": "Username",
+    "email": "Email",
+    "emailHint": "Email address cannot be changed",
+    "userId": "User ID",
+    "systemIdHint": "System-generated unique identifier",
+    "save": "Save Changes"
+  },
+  "plan": {
+    "title": "Subscription Plan",
+    "desc": "Current subscription status and usage limits",
+    "current": "Current Plan",
+    "upgrade": "Upgrade Plan",
+    "name": {
+      "trial": "Trial",
+      "pro": "Pro",
+      "team": "Team"
+    },
+    "limits": {
+      "trial": "Up to {{projects}} projects, {{tests}} tests/month",
+      "pro": "Unlimited projects, {{tests}} tests/month",
+      "team": "Unlimited projects, {{tests}} tests/month, multi-user collaboration"
+    },
+    "usage": {
+      "testsUsed": "Tests used this month",
+      "activeProjects": "Active projects",
+      "countOf": "{{used}} / {{limit}}",
+      "unlimited": "Unlimited"
+    }
+  },
+  "planDialog": {
+    "subtitle": "View your subscription details and usage statistics",
+    "clickToView": "Click to view details",
+    "testsRemaining": "{{count}} tests remaining",
+    "billingCycle": "Billing Cycle",
+    "daysRemaining": "{{days}} days remaining",
+    "renewalDate": "Renewal Date"
+  },
+  "security": {
+    "title": "Security Settings",
+    "desc": "Manage account security options",
+    "currentPassword": "Current Password",
+    "newPassword": "New Password",
+    "confirmPassword": "Confirm New Password",
+    "changePassword": "Change Password"
+  },
+  "upgradeDialog": {
+    "title": "Upgrade to Pro Version",
+    "description": "Choose the plan that suits you and unlock more features",
+    "proPlan": {
+      "title": "Pro Version",
+      "badge": "Recommended",
+      "description": "Suitable for individual developers and small teams",
+      "price": "$299",
+      "period": "/month",
+      "features": [
+        "Unlimited projects",
+        "10,000 tests/month",
+        "Support for all LLM models",
+        "Advanced analytics reports",
+        "Email support"
+      ],
+      "upgradeButton": "Upgrade Now"
+    },
+    "teamPlan": {
+      "title": "Team Version",
+      "description": "Suitable for enterprises and large teams",
+      "price": "$999",
+      "period": "/month",
+      "features": [
+        "All Pro features",
+        "100,000 tests/month",
+        "Multi-user collaboration",
+        "Custom test scenarios",
+        "Priority technical support",
+        "SLA guarantee"
+      ],
+      "contactButton": "Contact Sales"
+    }
+  }
+}

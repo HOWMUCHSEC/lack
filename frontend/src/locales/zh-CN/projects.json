@@ -1,0 +1,127 @@
+{
+  "list": {
+    "breadcrumb": "所有项目",
+    "pageTitle": "所有项目",
+    "pageDesc": "查看和管理所有测试项目",
+    "loading": "加载中...",
+    "table": {
+      "headers": {
+        "name": "项目名称",
+        "status": "状态",
+        "tags": "标签",
+        "createdAt": "创建时间",
+        "actions": "操作"
+      },
+      "empty": "暂无项目，点击\"新建项目\"创建第一个项目",
+      "emptyDesc": "创建新项目以开始",
+      "idPrefix": "ID: "
+    },
+    "status": {
+      "active": "进行中",
+      "completed": "已完成",
+      "paused": "暂停"
+    },
+    "actions": {
+      "newProject": "新建项目",
+      "view": "查看",
+      "edit": "编辑",
+      "delete": "删除"
+    },
+    "deleteConfirm": {
+      "title": "确认删除项目",
+      "description": "删除后项目数据将无法恢复。确定要继续吗？"
+    },
+    "searchPlaceholder": "搜索项目...",
+    "toasts": {
+      "loadFailed": "加载项目失败",
+      "loadFailedWithMsg": "加载项目失败: {{message}}",
+      "deleted": "项目已删除",
+      "deleteFailed": "删除失败"
+    },
+    "tags": {
+      "more": "+{{count}}"
+    }
+  },
+  "templates": {
+    "breadcrumb": "项目模板",
+    "pageTitle": "项目模板",
+    "pageDesc": "快速创建标准化测试项目",
+    "usage": "{{count}} 次使用",
+    "searchPlaceholder": "搜索模板...",
+    "table": {
+      "headers": {
+        "name": "模板名称",
+        "description": "描述",
+        "tags": "标签",
+        "usageCount": "使用次数",
+        "actions": "操作"
+      },
+      "empty": "暂无模板"
+    },
+    "actions": {
+      "newTemplate": "新建模板",
+      "useTemplate": "使用模板",
+      "edit": "编辑",
+      "delete": "删除"
+    },
+    "dialog": {
+      "createTitle": "新建项目模板",
+      "editTitle": "编辑模板",
+      "description": "创建可复用的项目模板",
+      "nameLabel": "模板名称",
+      "namePlaceholder": "例如：标准安全测试模板",
+      "descriptionLabel": "模板描述",
+      "descriptionPlaceholder": "描述此模板的用途和包含的测试场景",
+      "tagsLabel": "标签",
+      "tagsPlaceholder": "用逗号分隔",
+      "cancel": "取消",
+      "create": "创建模板",
+      "save": "保存更改"
+    },
+    "deleteDialog": {
+      "title": "确认删除模板",
+      "description": "删除后模板数据将无法恢复。确定要继续吗？"
+    },
+    "toasts": {
+      "loadError": "加载模板失败",
+      "loadErrorWithMsg": "加载模板失败: {{message}}",
+      "deleteSuccess": "模板已删除",
+      "deleteFailed": "删除失败",
+      "nameRequired": "请填写模板名称",
+      "loginRequired": "请先登录",
+      "updateSuccess": "模板更新成功",
+      "createSuccess": "模板创建成功",
+      "saveFailed": "保存失败"
+    }
+  },
+  "form": {
+    "createTitle": "新建项目",
+    "editTitle": "编辑项目",
+    "createDesc": "创建一个新的项目进行管理",
+    "editDesc": "修改项目信息",
+    "nameLabel": "项目名称",
+    "namePlaceholder": "例如：GPT-4 安全测试",
+    "statusLabel": "状态",
+    "tagsLabel": "标签",
+    "tagsPlaceholder": "用逗号分隔，例如：安全, 基线测试",
+    "descriptionLabel": "项目描述",
+    "descriptionPlaceholder": "描述项目的测试目标和范围",
+    "cancel": "取消",
+    "saving": "保存中...",
+    "create": "创建项目",
+    "save": "保存更改",
+    "status": {
+      "active": "进行中",
+      "paused": "暂停",
+      "completed": "已完成"
+    },
+    "toasts": {
+      "nameRequired": "请填写项目名称",
+      "loginRequired": "请先登录",
+      "loadFailed": "加载项目信息失败",
+      "updateSuccess": "项目更新成功",
+      "createSuccess": "项目创建成功",
+      "saveFailed": "保存失败"
+    }
+  }
+}

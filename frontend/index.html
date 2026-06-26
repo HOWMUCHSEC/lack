@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" class="dark" style="background-color: #0A0A0A">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lack - LLM Attack Platform Kit</title>
+  <script>
+    // 强制等待 Wails 运行时就绪
+    window.wailsReady = false;
+
+    // 监听 DOMContentLoaded 后再检查运行时
+    document.addEventListener('DOMContentLoaded', function () {
+      console.log('[Wails] DOMContentLoaded fired');
+
+      // 轮询检查运行时
+      let attempts = 0;
+      const maxAttempts = 100; // 最多等待 10 秒
+
+      const checkRuntime = setInterval(function () {
+        attempts++;
+
+        if (window.go && window.runtime) {
+          console.log('[Wails] Runtime detected after', attempts * 100, 'ms');
+          window.wailsReady = true;
+          clearInterval(checkRuntime);
+
+          // 触发自定义事件通知 React
+          window.dispatchEvent(new Event('wails:ready'));
+        } else if (attempts >= maxAttempts) {
+          console.error('[Wails] Runtime not detected after 10s - may be running in browser');
+          clearInterval(checkRuntime);
+
+          // 即使失败也继续，只是功能受限
+          window.dispatchEvent(new Event('wails:ready'));
+        }
+      }, 100);
+    });
+  </script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
+</html>

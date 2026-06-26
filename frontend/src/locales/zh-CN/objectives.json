@@ -1,0 +1,197 @@
+{
+  "pageTitle": "模型模板",
+  "pageDesc": "快速创建标准化模型方案",
+  "table": {
+    "headers": {
+      "name": "模型名称",
+      "description": "描述",
+      "tags": "标签",
+      "usageCount": "使用次数",
+      "actions": "操作"
+    },
+    "empty": "暂无模型"
+  },
+  "allObjectives": {
+    "newModel": "新建模型",
+    "loading": "加载中...",
+    "searchPlaceholder": "搜索模型...",
+    "empty": "暂无模型，点击\"新建模型\"创建第一个模型",
+    "deleteDialog": {
+      "title": "确认删除模型",
+      "description": "删除后模型数据将无法恢复。确定要继续吗？"
+    },
+    "table": {
+      "headers": {
+        "name": "模型名称",
+        "project": "所属项目",
+        "status": "状态",
+        "order": "排序",
+        "tags": "标签",
+        "createdAt": "创建时间",
+        "purpose": "模型分类",
+        "actions": "操作"
+      }
+    }
+  },
+  "templates": {
+    "table": {
+      "headers": {
+        "name": "模板名称",
+        "category": "风险分类",
+        "description": "描述",
+        "usageCount": "使用次数",
+        "actions": "操作"
+      }
+    },
+    "usage": "{{count}} 次使用",
+    "searchPlaceholder": "搜索模板...",
+    "noDesc": "暂无描述。"
+  },
+  "actions": {
+    "newTemplate": "新建模型",
+    "newTemplateBtn": "新建模板",
+    "useTemplate": "使用模板",
+    "view": "查看",
+    "edit": "编辑",
+    "delete": "删除"
+  },
+  "list": {
+    "actions": {
+      "view": "查看",
+      "edit": "编辑",
+      "delete": "删除"
+    }
+  },
+  "dialog": {
+    "createTitle": "新建模型模板",
+    "editTitle": "编辑模板",
+    "description": "创建可复用的模型模板",
+    "nameLabel": "模板名称",
+    "namePlaceholder": "例如：标准安全测试模型",
+    "descriptionLabel": "模板描述",
+    "descriptionPlaceholder": "描述此模板的用途和包含的测试场景",
+    "tagsLabel": "标签",
+    "tagsPlaceholder": "用逗号分隔",
+    "cancel": "取消",
+    "create": "创建模板",
+    "save": "保存更改"
+  },
+  "deleteDialog": {
+    "title": "确认删除模板",
+    "description": "删除后模板数据将无法恢复。确定要继续吗?"
+  },
+  "toast": {
+    "loadError": "加载模板失败",
+    "deleteSuccess": "模板已删除",
+    "deleteFailed": "删除失败",
+    "nameRequired": "请填写模板名称",
+    "loginRequired": "请先登录",
+    "updateSuccess": "模板更新成功",
+    "createSuccess": "模板创建成功",
+    "saveFailed": "保存失败"
+  },
+  "form": {
+    "createTitle": "创建模型",
+    "editTitle": "编辑模型",
+    "createDesc": "为项目创建新的模型（API 端点配置）",
+    "editDesc": "修改模型信息",
+    "projectLabel": "所属项目",
+    "projectPlaceholder": "选择项目",
+    "statusLabel": "状态",
+    "orderLabel": "排序",
+    "purposeLabel": "用途",
+    "purpose": {
+      "target": "目标模型",
+      "judge": "评判模型"
+    },
+    "nameLabel": "模型名称",
+    "namePlaceholder": "例如：暴力内容检测",
+    "tagsLabel": "标签",
+    "tagsPlaceholder": "用逗号分隔，例如：安全, 基线",
+    "apiConfig": "API 配置",
+    "apiConfigDesc": "模板将保存请求方法、超时时间、请求头与体等默认配置",
+    "testConnection": "测试连接",
+    "testing": "测试中...",
+    "apiUrlLabel": "API 地址",
+    "apiUrlPlaceholder": "https://api.openai.com/v1/chat/completions",
+    "apiUrlHint": "兼容 OpenAI API 格式的端点地址",
+    "apiTokenLabel": "API Token",
+    "apiTokenPlaceholder": "sk-...",
+    "methodLabel": "请求方法",
+    "methodPlaceholder": "选择方法",
+    "methods": {
+      "GET": "GET",
+      "POST": "POST",
+      "PUT": "PUT",
+      "PATCH": "PATCH",
+      "DELETE": "DELETE"
+    },
+    "timeoutLabel": "超时时间（秒）",
+    "timeoutPlaceholder": "5",
+    "headersLabel": "请求头模板（JSON）",
+    "headersPlaceholder": "{\"Content-Type\": \"application/json\"}",
+    "bodyLabel": "请求体模板（JSON）",
+    "bodyPlaceholder": "{\"model\": \"gpt-4\", \"messages\": []}",
+    "formatJson": "校验并格式化",
+    "advanced": "高级选项",
+    "hideAdvanced": "隐藏高级选项",
+    "help": "帮助",
+    "helpDialog": {
+      "headersTitle": "请求头帮助",
+      "headersDesc": "",
+      "bodyTitle": "请求体模板帮助",
+      "bodyDesc": "",
+      "requestFieldTitle": "请求字段路径帮助",
+      "requestFieldDesc": "",
+      "responseFieldTitle": "响应字段路径帮助",
+      "responseFieldDesc": ""
+    },
+    "requestFieldLabel": "请求字段路径",
+    "requestFieldPlaceholder": "messages[0].content",
+    "requestFieldHint": "样本将插入到此字段，支持点分路径如 messages[0].content",
+    "responseFieldLabel": "响应字段路径",
+    "responseFieldPlaceholder": "choices[0].message.content",
+    "responseFieldHint": "从响应中提取此字段的值作为结果，支持点分路径如 choices[0].message.content",
+    "modelNameLabel": "模型名称标识",
+    "modelNamePlaceholder": "gpt-4o, claude-3.5-sonnet 等",
+    "modelNameHint": "用于评测时标识具体使用的模型版本",
+    "detailsLabel": "备注说明",
+    "detailsPlaceholder": "描述此 API 配置的用途和特殊说明",
+    "cancel": "取消",
+    "saving": "保存中...",
+    "create": "创建模型",
+    "save": "保存更改",
+    "status": {
+      "planned": "可用",
+      "archived": "不可用"
+    },
+    "response": {
+      "title": "接口响应",
+      "desc": "状态码 {{status}}，耗时 {{time}}ms",
+      "close": "关闭",
+      "empty": "响应为空",
+      "unknown": "未知",
+      "extractedField": "提取的字段值",
+      "fullResponse": "完整响应"
+    },
+    "toasts": {
+      "nameRequired": "请填写模型名称",
+      "projectRequired": "请选择所属项目",
+      "urlRequired": "请填写 API 地址",
+      "headersRequired": "请填写请求头模板",
+      "bodyRequired": "请填写请求体模板",
+      "requestFieldRequired": "请填写请求字段路径",
+      "responseFieldRequired": "请填写响应字段路径",
+      "loginRequired": "请先登录",
+      "loadFailed": "加载模型信息失败",
+      "updateSuccess": "模型更新成功",
+      "createSuccess": "模型创建成功",
+      "saveFailed": "保存失败",
+      "jsonEmpty": "内容为空，无法格式化",
+      "jsonFormatted": "JSON 已格式化",
+      "jsonInvalid": "JSON 校验失败：{{message}}",
+      "testError": "请求失败：{{message}}",
+      "connectionFailed": "连接失败，状态码 {{status}}"
+    }
+  }
+}

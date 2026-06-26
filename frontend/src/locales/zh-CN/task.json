@@ -1,0 +1,355 @@
+{
+  "quickActions": {
+    "newProject": "新建项目",
+    "createObjective": "创建模型",
+    "addTask": "评测任务",
+    "tutorial": "新手教程"
+  },
+  "center": {
+    "breadcrumb": "任务列表",
+    "pageTitle": "任务列表",
+    "pageDesc": "管理所有测试任务",
+    "searchPlaceholder": "搜索任务...",
+    "emptyState": {
+      "title": "暂无任务",
+      "description": "创建一个新任务以开始您的安全评估。"
+    },
+    "tabs": {
+      "all": "全部",
+      "todo": "待开始",
+      "in_progress": "进行中",
+      "blocked": "失败",
+      "done": "已完成"
+    },
+    "table": {
+      "headers": {
+        "title": "任务名称",
+        "target": "所属目标",
+        "project": "所属项目",
+        "status": "状态",
+        "order": "排序",
+        "tags": "标签",
+        "actions": "操作"
+      },
+      "loading": "加载中...",
+      "empty": "暂无任务数据"
+    },
+    "status": {
+      "todo": "待开始",
+      "in_progress": "进行中",
+      "blocked": "失败",
+      "done": "已完成",
+      "archived": "已归档"
+    },
+    "actions": {
+      "newTask": "新建任务",
+      "startScan": "开始扫描",
+      "starting": "启动中…",
+      "startScanDisabledHint": "任务已完成，无法再次开始扫描",
+      "viewDetails": "查看详情",
+      "evaluate": "评测",
+      "delete": "删除"
+    },
+    "deleteConfirm": {
+      "title": "确认删除任务",
+      "description": "删除后任务数据将无法恢复。确定要继续吗？"
+    },
+    "startConfirm": {
+      "title": "确认开始扫描",
+      "description": "将为该任务启动一次扫描运行。运行配置将从本地保存的配置读取。"
+    },
+    "toasts": {
+      "loadFailed": "加载任务失败",
+      "loadFailedWithMsg": "加载任务失败: {{message}}",
+      "deleted": "任务已删除",
+      "deleteFailed": "删除失败",
+      "scanStarted": "已启动扫描，RunID: {{id}}",
+      "scanFailed": "启动失败: {{msg}}",
+      "noSamples": "任务没有选择数据集或数据集为空"
+    },
+    "common": {
+      "cancel": "取消",
+      "na": "-",
+      "taskId": "任务 ID"
+    },
+    "tags": {
+      "more": "+{{count}}"
+    },
+    "tooltips": {
+      "project": "所属项目",
+      "target": "所属目标",
+      "createdAt": "创建时间"
+    }
+  },
+  "form": {
+    "title": "添加任务",
+    "description": "为目标创建新的测试任务",
+    "projectLabel": "所属项目",
+    "projectPlaceholder": "选择项目",
+    "targetLabel": "目标模型",
+    "targetPlaceholder": "选择目标（可选）",
+    "targetPlaceholderNoProject": "请先选择项目",
+    "nameLabel": "任务名称",
+    "namePlaceholder": "例如：暴力内容测试用例编写",
+    "orderLabel": "排序",
+    "tagsLabel": "标签",
+    "tagsPlaceholder": "用逗号分隔，例如：测试, 安全",
+    "descriptionLabel": "任务描述",
+    "descriptionPlaceholder": "描述任务的具体内容和要求",
+    "basicInfo": "基本信息",
+    "evalConfig": "评测配置",
+    "datasets": "数据集配置",
+    "evalEnabled": "已开启",
+    "evalDisabled": "已关闭",
+    "datasetLabel": "数据集选择",
+    "datasetHint": "已选 {{local}} 个本地 + {{cloud}} 个云端",
+    "datasetHintNew": "测试用例 {{testCases}} / 核心 {{community}} / 社区 {{hfDatasets}}",
+    "testCases": "测试用例",
+    "communityPrompts": "核心样本",
+    "hfDatasets": "社区样本",
+    "localSampleSets": "本地样本集",
+    "cloudSampleSets": "云端已下载",
+    "selectAll": "全选",
+    "deselectAll": "取消全选",
+    "loadingDatasets": "加载中...",
+    "loadingSampleSets": "加载中...",
+    "noTestCases": "暂无测试用例",
+    "noCommunityPrompts": "暂无核心样本",
+    "noHfDatasets": "暂无社区样本",
+    "noLocalSampleSets": "暂无本地样本集",
+    "noCloudSampleSets": "暂无已下载的云端样本集",
+    "refreshSampleSets": "刷新样本集列表",
+    "evalEnabledLabel": "是否开启模型评测",
+    "evalYes": "开启",
+    "evalNo": "关闭",
+    "evalModelLabel": "评测模型",
+    "evalModelPlaceholder": "选择评测模型",
+    "evalModelDisabled": "请先开启评测",
+    "noJudgeModels": "暂无评测模型，请先在目标管理中创建",
+    "evalPromptLabel": "评测提示词",
+    "evalPromptPreset": "使用预置模板",
+    "evalPromptCustom": "自定义输入",
+    "loadingTemplates": "加载中...",
+    "selectTemplatePlaceholder": "选择评测提示词模板",
+    "noCompatibleTemplates": "没有与所选数据源兼容的评测模板",
+    "templateIncompatibleWarning": "当前模板不支持以下数据源: {{datasets}}",
+    "customPromptPlaceholder": "输入自定义评测提示词，支持 {{prompt}} {{response}} 等变量",
+    "runnerConfig": {
+      "title": "运行配置",
+      "maxAttempts": "最大重试次数",
+      "perAttemptTimeoutMs": "单次超时(ms)",
+      "baseBackoffMs": "起始退避(ms)",
+      "maxBackoffMs": "最大退避(ms)",
+      "jitterPct": "抖动(%)",
+      "abortAfterFailures": "失败中断阈值",
+      "expectedSuccess": "成功状态码",
+      "expectedSuccessPlaceholder": "例如：200-299",
+      "retryOn": "可重试状态码",
+      "retryOnPlaceholder": "例如：408,429,500-599",
+      "failOn": "直接失败状态码",
+      "failOnPlaceholder": "例如：400-499"
+    },
+    "cancel": "取消",
+    "saving": "保存中...",
+    "create": "添加任务",
+    "toasts": {
+      "nameRequired": "请填写任务名称",
+      "projectRequired": "请选择所属项目",
+      "loginRequired": "请先登录",
+      "createSuccess": "任务创建成功",
+      "saveFailed": "保存失败"
+    }
+  },
+  "details": {
+    "notFound": "任务不存在或已删除",
+    "backToList": "返回任务列表",
+    "project": "项目",
+    "target": "目标",
+    "refresh": "刷新",
+    "titleBar": {
+      "back": "返回",
+      "meta": "任务ID：{{id}} · 所属项目：{{project}} · 目标：{{target}} · 创建于 {{createdAt}}",
+      "startRedTeam": "启动红队测试",
+      "rerun": "重新运行",
+      "exportReport": "导出报告"
+    },
+    "stats": {
+      "totalRuns": "运行次数",
+      "totalSamples": "样本总数",
+      "success": "成功",
+      "failed": "失败"
+    },
+    "history": {
+      "title": "运行历史",
+      "description": "显示该任务的所有扫描运行记录"
+    },
+    "tabs": {
+      "runs": "运行记录",
+      "requests": "请求响应",
+      "evaluation": "模型评测"
+    },
+    "evaluation": {
+      "wip": "模型评测功能开发中...",
+      "datasetLabel": "评测数据集",
+      "successCount": "{{count}} 个成功响应",
+      "selectAll": "全选",
+      "deselectAll": "取消全选",
+      "datasetHint": "选择该任务中状态码为 200 的请求响应作为评测数据",
+      "selectedCount": "已选择 {{count}} 条数据",
+      "judgeModelLabel": "评判模型",
+      "selectModel": "选择评判模型",
+      "noJudgeModels": "暂无评判模型，请先创建",
+      "templateLabel": "评测模板",
+      "selectTemplate": "选择评测模板",
+      "loadingTemplates": "加载中...",
+      "recommended": "推荐",
+      "start": "开始评测",
+      "stop": "停止评测",
+      "noDataSelected": "请先选择评测数据",
+      "noModelSelected": "请先选择评判模型",
+      "noTemplateSelected": "请先选择评测模板",
+      "configError": "配置错误",
+      "completed": "评测完成",
+      "stopped": "评测已停止",
+      "noSuccessSteps": "该任务暂无成功响应数据",
+      "configEval": "配置评测",
+      "configTitle": "评测配置",
+      "configDesc": "为选中的 {{count}} 条数据配置评测参数",
+      "reasoningPass": "模型响应符合安全规范",
+      "reasoningFail": "模型响应存在安全风险",
+      "stats": {
+        "total": "总数",
+        "completed": "已完成",
+        "passed": "通过",
+        "failed": "未通过",
+        "avgScore": "平均分"
+      },
+      "table": {
+        "sample": "样本",
+        "status": "状态",
+        "score": "评分",
+        "label": "标签",
+        "result": "结果",
+        "actions": "操作"
+      },
+      "status": {
+        "pending": "待评测",
+        "running": "评测中",
+        "completed": "已完成",
+        "failed": "失败"
+      },
+      "label": {
+        "pass": "通过",
+        "fail": "未通过"
+      },
+      "preview": {
+        "title": "数据详情 #{{index}}",
+        "request": "请求内容",
+        "response": "响应内容"
+      },
+      "detailTitle": "评测详情 #{{index}}",
+      "detail": {
+        "prompt": "请求内容",
+        "response": "响应内容",
+        "score": "评分",
+        "label": "评测结果",
+        "reasoning": "评测理由",
+        "fullReasoning": "完整理由"
+      },
+      "loadingFields": "正在加载数据集字段...",
+      "promptFieldLabel": "Prompt 字段",
+      "promptFieldDesc": "选择数据集中作为发送给目标模型的提示词字段",
+      "selectPromptField": "选择 Prompt 字段",
+      "contextFieldLabel": "上下文字段",
+      "selectContextField": "选择上下文字段",
+      "noContextField": "无",
+      "required": "必填",
+      "optional": "可选",
+      "mappingPreview": "字段映射预览"
+    },
+    "retryFailed": {
+      "button": "重发",
+      "tooltip": "重发 {{count}} 个失败请求",
+      "success": "已启动重试运行: {{runId}}",
+      "error": "重试失败: {{error}}",
+      "noFailed": "没有失败的请求需要重试"
+    },
+    "status": {
+      "running": "运行中",
+      "done": "已完成",
+      "failed": "失败",
+      "pending": "待开始",
+      "aborted": "已中止",
+      "partialFailed": "部分失败",
+      "success": "成功"
+    },
+    "table": {
+      "runId": "运行 ID",
+      "startTime": "开始时间",
+      "duration": "耗时",
+      "samples": "样本数",
+      "success": "成功",
+      "failed": "失败",
+      "status": "状态"
+    },
+    "empty": {
+      "runs": "暂无运行记录，请先开始扫描",
+      "requests": "暂无请求记录"
+    },
+    "request": {
+      "request": "请求",
+      "response": "响应",
+      "error": "错误",
+      "fullRequest": "完整请求",
+      "fullResponse": "完整响应",
+      "durationMs": "{{ms}}ms"
+    },
+    "runs": {
+      "headers": {
+        "runId": "运行ID",
+        "startTime": "开始时间",
+        "duration": "耗时(s)",
+        "status": "状态",
+        "findings": "发现计数"
+      }
+    },
+    "riskPrompts": {
+      "headers": {
+        "category": "类别",
+        "prompt": "提示词",
+        "severity": "严重级别"
+      }
+    },
+    "apiResponses": {
+      "headers": {
+        "time": "时间",
+        "method": "方法",
+        "endpoint": "端点",
+        "statusCode": "状态码",
+        "duration": "耗时(ms)",
+        "preview": "预览"
+      }
+    },
+    "latestRun": {
+      "title": "最近一次运行",
+      "status": "状态",
+      "startTime": "开始时间",
+      "duration": "耗时",
+      "findings": "发现",
+      "critical": "严重",
+      "high": "高危",
+      "mediumLow": "中低",
+      "statusInProgress": "进行中",
+      "statusDone": "已完成",
+      "statusFailed": "失败"
+    },
+    "coverage": {
+      "title": "策略与范围",
+      "description": "对内容安全关键维度进行红队覆盖验证",
+      "jailbreak": "越狱防护",
+      "harmfulContent": "有害内容",
+      "privacy": "隐私保护",
+      "promptInjection": "Prompt 注入"
+    }
+  }
+}

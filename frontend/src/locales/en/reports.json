@@ -1,0 +1,249 @@
+{
+  "pageTitle": "All Reports",
+  "pageDesc": "View and manage all evaluation reports",
+  "loading": "Loading...",
+  "selectProject": "Select Project",
+  "selectTargetModel": "Target Model",
+  "noTargetModels": "No target models associated with this project",
+  "reportPrefix": "Report",
+  "reportId": "Report ID",
+  "evaluationScore": "Evaluation Score",
+  "scoreLabel": "Score: {{score}}",
+  "emptyHint": "Generate a new report to see the evaluation results.",
+  "allTab": "All",
+  "table": {
+    "headers": {
+      "name": "Report Name",
+      "project": "Project",
+      "status": "Status",
+      "createdAt": "Created At",
+      "actions": "Actions"
+    },
+    "empty": "No reports"
+  },
+  "status": {
+    "label": "Status",
+    "pending": "Pending",
+    "generating": "Generating",
+    "completed": "Completed",
+    "failed": "Failed"
+  },
+  "actions": {
+    "view": "View",
+    "export": "Export",
+    "download": "Download PDF",
+    "delete": "Delete",
+    "exportPdf": "Export PDF",
+    "exportMarkdown": "Export Markdown",
+    "exportJson": "Export JSON",
+    "exportCsv": "Export CSV"
+  },
+  "toasts": {
+    "loadFailed": "Failed to load projects"
+  },
+  "unified": {
+    "projectTable": {
+      "name": "Project Name",
+      "status": "Status",
+      "createdAt": "Created At",
+      "actions": "Actions"
+    },
+    "riskTable": {
+      "category": "Risk Category",
+      "probability": "Probability",
+      "severity": "Severity",
+      "notes": "Notes"
+    },
+    "coverageTable": {
+      "category": "Risk Category",
+      "modality": "Modality",
+      "language": "Language",
+      "conversationType": "Conversation Type",
+      "caseCount": "Case Count"
+    },
+    "caseTable": {
+      "caseId": "Case ID",
+      "category": "Category",
+      "modality": "Modality",
+      "language": "Language",
+      "result": "Result",
+      "severity": "Severity"
+    }
+  },
+  "studio": {
+    "riskTable": {
+      "category": "Category",
+      "probability": "Probability",
+      "severity": "Severity",
+      "description": "Description"
+    },
+    "coverageTable": {
+      "category": "Category",
+      "modality": "Modality",
+      "language": "Language",
+      "structure": "Structure",
+      "caseCount": "Case Count"
+    },
+    "caseTable": {
+      "caseId": "Case ID",
+      "category": "Category",
+      "modality": "Modality",
+      "language": "Language",
+      "conversation": "Conversation",
+      "result": "Result",
+      "severity": "Severity"
+    }
+  },
+  "dimension": {
+    "title": "Dimension Overview",
+    "description": "Multi-dimensional test coverage",
+    "stage": "Stage",
+    "riskPoints": "Risk Points",
+    "coverage": "Coverage",
+    "riskDistribution": "Risk Distribution",
+    "agentPipeline": "Agent Pipeline",
+    "safetyGuards": "Safety Guards",
+    "modalityCoverage": "Modality Coverage"
+  },
+  "detail": {
+    "breadcrumb": "Security Assessment Report",
+    "export": "Export",
+    "unlock": "Unlock Report",
+    "selectProject": "Select Project to Generate Report",
+    "selectProjectDesc": "Generate standard-compliant security assessment reports from existing projects",
+    "generate": "Generate Report",
+    "backToList": "Back to List",
+    "testWindow": "Test Window",
+    "kpis": {
+      "violationRate": "Violation Rate",
+      "criticalViolationRate": "Critical Violation Rate",
+      "escapeRate": "Escape Rate",
+      "blockRate": "Block Rate",
+      "guardrailEffectiveness": "Guardrail Effectiveness",
+      "overallScore": "Overall Score"
+    },
+    "tabs": {
+      "overview": "Overview",
+      "risk": "Risk Model",
+      "coverage": "Test Coverage",
+      "cases": "Case Details",
+      "remediation": "Remediation Plan"
+    },
+    "scope": {
+      "title": "Test Scope",
+      "modalities": "Covered Modalities",
+      "languages": "Test Languages"
+    },
+    "methodology": {
+      "title": "Test Methodology",
+      "testTypes": "Test Types: ",
+      "judges": "Judges: ",
+      "conversationPatterns": "Conversation Patterns: "
+    },
+    "statistics": {
+      "totalCases": "Total Cases",
+      "passed": "Passed",
+      "failed": "Failed",
+      "blocked": "Blocked",
+      "showingFirst": "Showing first {{limit}} of {{total}} records"
+    },
+    "riskModel": {
+      "title": "Threat Matrix",
+      "desc": "Risk category probability and severity assessment"
+    },
+    "coverageMatrix": {
+      "title": "Coverage Matrix",
+      "desc": "Test case distribution across dimensions"
+    },
+    "caseDetails": {
+      "title": "Case Details",
+      "count": "Total {{count}} test case records"
+    },
+    "remediation": {
+      "title": "Remediation Plan",
+      "desc": "Risk remediation recommendations based on test results",
+      "topRisks": "Top Risks & Remediation Plan",
+      "topRisksDesc": "High-priority security risks requiring immediate attention",
+      "owner": "Owner: ",
+      "actions": "Remediation Actions: ",
+      "sla": "Complete within {{days}} days",
+      "gates": "Release Gate Conditions"
+    }
+  },
+  "modelEval": {
+    "title": "Model Evaluation Report",
+    "projectInfo": "Project {{project}} - Generated at {{date}}",
+    "summary": {
+      "overallScore": "Overall Score",
+      "excellent": "Excellent",
+      "good": "Good",
+      "average": "Average",
+      "poor": "Poor",
+      "totalTests": "Total Tests",
+      "passRate": "Pass Rate",
+      "avgResponseTime": "Average Response Time"
+    },
+    "security": {
+      "title": "Security Scan Results",
+      "mcp": "MCP Security",
+      "infra": "AI Infrastructure",
+      "cloud": "AI Cloud Security",
+      "status": {
+        "secure": "Secure",
+        "warning": "Warning",
+        "danger": "Danger"
+      },
+      "findings": "Findings: {{count}}",
+      "vulnerabilities": "Vulnerabilities: {{count}}",
+      "critical": "Critical: {{count}}",
+      "riskLevel": "Risk level: {{level}}",
+      "threats": "Threats: {{count}}"
+    },
+    "evaluation": {
+      "title": "Model Evaluation Results",
+      "taskMetrics": "Task Completion Metrics",
+      "performance": "Performance Score",
+      "sampleCoverage": "Sample Coverage",
+      "covered": "{{rate}}% covered ({{covered}} / {{total}})",
+      "table": {
+        "taskName": "Task Name",
+        "total": "Total",
+        "completed": "Completed",
+        "successRate": "Success Rate"
+      }
+    },
+    "testCases": {
+      "title": "Test Case Results",
+      "executionSummary": "Execution Summary",
+      "variableValidation": "Variable Validation Results",
+      "table": {
+        "testId": "Test ID",
+        "description": "Description",
+        "status": "Status",
+        "time": "Time"
+      },
+      "validation": {
+        "input": "Input Validation",
+        "output": "Output Format",
+        "schema": "Schema Compliance"
+      }
+    },
+    "quickStats": {
+      "title": "Quick Stats",
+      "passRateLabel": "Pass Rate",
+      "peakMemory": "Peak Memory",
+      "avgGpuUtil": "Average GPU Utilization",
+      "throughput": "Throughput",
+      "errorRate": "Error Rate"
+    },
+    "research": {
+      "title": "Research Insights",
+      "referencedPapers": "{{count}} referenced papers",
+      "keyFindings": "Key Findings"
+    },
+    "widgets": {
+      "moreComing": "More widgets coming soon..."
+    },
+    "footer": "Generated by the Lanlyzer Evaluation Engine - {{date}}"
+  }
+}

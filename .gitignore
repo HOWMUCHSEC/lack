@@ -1,0 +1,47 @@
+# Logs
+logs
+*.log
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/pnpm-debug.log*
+frontend/lerna-debug.log*
+
+frontend/node_modules
+node_modules
+.pnpm-store
+frontend/dist
+frontend/dist-ssr
+*.tsbuildinfo
+*.local
+.env
+.env.*
+!.env.example
+!.env.*.example
+scripts/**/.env
+scripts/**/.env.*
+!scripts/**/.env.example
+!scripts/**/.env.*.example
+__pycache__/
+*.py[cod]
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+frontend/package-lock.json
+build/
+tmp-nuclei-templates/
+
+*.zip
+
+# R2 upload credentials
+.env.r2
+.env.r2.example

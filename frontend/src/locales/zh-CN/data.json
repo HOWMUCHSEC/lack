@@ -1,0 +1,122 @@
+{
+  "general": {
+    "description": "利用大语言模型实时生成高质量泛用文本内容"
+  },
+  "advanced": {
+    "description": "结构化数据处理与复杂 AI 工作流编排工具集"
+  },
+  "common": {
+    "copyCode": "复制代码",
+    "copySuccess": "复制成功",
+    "reset": "重置"
+  },
+  "workspace": {
+    "inputTitle": "多行文本输入",
+    "inputPlaceholder": "在此输入用于 {{title}} 的源文本...",
+    "configTitle": "配置区域",
+    "advancedConfig": "{{title}} 高级参数配置",
+    "execute": "生成 / 执行任务",
+    "resultTitle": "执行结果 (Model 输出)",
+    "resultDescription": "{{title}} 任务已完成，以下是模型返回的结果。",
+    "resultPlaceholder": "此处为模型执行返回的输出结果...\n(占位文本，实际应用中替换为真实返回数据)"
+  },
+  "tabs": {
+    "textConversion": {
+      "title": "文本转换",
+      "description": "用于将普通文本转换为指定的特殊格式或编码类型。"
+    },
+    "emoji": {
+      "title": "Emoji",
+      "description": "自动解析并注入相关的 Emoji 表情，增强文本表现力。"
+    },
+    "inputPerturbation": {
+      "title": "输入扰动",
+      "description": "对输入文本进行同义词替换或特殊字符干扰，用于测试鲁棒性。"
+    },
+    "charMapping": {
+      "title": "字符映射",
+      "description": "提供自定义的字符映射集，对输入文本进行底层编码替换。"
+    },
+    "splitter": {
+      "title": "拆分器",
+      "description": "将长文本依据语义或自定义规则进行精准拆分处理。"
+    },
+    "aiRewrite": {
+      "title": "AI改写",
+      "description": "利用底层模型能力对现有文本进行语意保留的重写。"
+    },
+    "ancientStyle": {
+      "title": "古风写作",
+      "description": "引入古风语料特征，将现代白话文转化为古风诗意文本。"
+    },
+    "multiTurnTemplate": {
+      "title": "多轮模版",
+      "description": "用于编排和测试多轮对话提示词模版与复杂系统级注入。"
+    },
+    "asciiSmuggling": {
+      "title": "ASCII走私"
+    },
+    "imageInjection": {
+      "title": "图像注入",
+      "description": "在多模态输入中注入含有特殊指令或对抗样本的图像数据。"
+    },
+    "audioInjection": {
+      "title": "音频注入",
+      "description": "生成带有特定频率或隐藏语音指令的音频数据。"
+    },
+    "richTextInjection": {
+      "title": "富文本注入",
+      "description": "在 HTML/Markdown 中嵌入恶意或探测性结构化标签。"
+    },
+    "docxInjection": {
+      "title": "DOCX注入",
+      "description": "操作 Office Open XML 结构注入远程模板或特殊指令。"
+    },
+    "pdfInjection": {
+      "title": "PDF注入",
+      "description": "在 PDF 文档对象中注入混淆脚本或探测链接。"
+    }
+  },
+  "ascii": {
+    "visibleText": {
+      "title": "可见文本",
+      "description": "这里是正常展示给读者的内容，隐藏payload会附着在这段文本前后或中间。",
+      "placeholder": "这是一段正常可见的文本，用来承载隐藏内容。"
+    },
+    "insertSettings": {
+      "title": "插入设置",
+      "positionLabel": "插入位置",
+      "positionPlaceholder": "选择插入位置",
+      "positions": {
+        "append": "追加到末尾",
+        "prepend": "前置到开头",
+        "middle": "随机插入中间"
+      },
+      "encodingLabel": "编码模式",
+      "encodingPlaceholder": "选择编码模式",
+      "encodings": {
+        "auto": "自动处理",
+        "base64": "强制 Base64",
+        "raw": "原始 ASCII"
+      }
+    },
+    "hiddenPayload": {
+      "title": "隐藏payload",
+      "description": "要偷偷插入的内容。自动模式会在必要时改成Base64，因此也能处理中文或非ASCII字符。",
+      "placeholder": "输入要隐藏的内容..."
+    },
+    "quickActions": {
+      "title": "快捷操作",
+      "placeholderLabel": "操作占位",
+      "write": "写入走私文本"
+    },
+    "result": {
+      "statsTitle": "检测统计",
+      "payloadCount": "共找到 {{count}} 段payload，隐藏字符 {{chars}} 个",
+      "visibleLength": "可见文本长度 {{count}}",
+      "firstPayloadTitle": "首段payload",
+      "emptyPayload": "当前未解析到隐藏内容",
+      "placeholder": "写入结果会显示在这里，便于直接复制或导出。"
+    }
+  }
+}

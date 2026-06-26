@@ -1,0 +1,108 @@
+{
+  "app": {
+    "name": "Lack",
+    "error": "页面发生错误"
+  },
+  "language": {
+    "en": "English",
+    "zh-CN": "简体中文"
+  },
+  "siteHeader": {
+    "title": "文档",
+    "github": "GitHub"
+  },
+  "common": {
+    "cancel": "取消",
+    "delete": "删除",
+    "refresh": "刷新",
+    "close": "关闭",
+    "colon": "：",
+    "more": "更多",
+    "open": "打开",
+    "share": "分享",
+    "view": "查看",
+    "edit": "编辑",
+    "plan": {
+      "trial": "试用版",
+      "pro": "Pro 版",
+      "team": "团队版"
+    }
+  },
+  "mode": {
+    "oneclick": "一键",
+    "pro": "专业",
+    "quickStart": "快速开始",
+    "historyReports": "历史报告"
+  },
+  "navUser": {
+    "upgradePro": "升级到 Pro",
+    "accountSettings": "账户设置",
+    "language": "语言",
+    "theme": "外观",
+    "themeLight": "浅色",
+    "themeDark": "深色",
+    "themeSystem": "跟随系统",
+    "signOut": "退出登录"
+  },
+  "sidebar": {
+    "title": "侧边栏",
+    "description": "显示移动端侧边栏。",
+    "expandAll": "全部展开",
+    "collapseAll": "全部收起"
+  },
+  "toasts": {
+    "loadingCloudData": "正在加载云端数据...",
+    "success": "操作成功",
+    "error": "操作失败",
+    "processing": "处理中..."
+  },
+  "teamSwitcher": {
+    "teams": "团队",
+    "contact": "联系",
+    "email": "邮箱：{{id}}"
+  },
+  "chart": {
+    "totalVisitors": "总访问量",
+    "totalForLast3Months": "最近3个月的总量",
+    "last3Months": "最近3个月",
+    "last30Days": "最近30天",
+    "last7Days": "最近7天",
+    "visitors": "访客",
+    "desktop": "桌面端",
+    "mobile": "移动端"
+  },
+  "noPermission": {
+    "title": "权限不足",
+    "gotIt": "我知道了",
+    "upgrade": "升级套餐"
+  },
+  "details": {
+    "sections": {
+      "basic": "基本信息",
+      "meta": "元信息",
+      "stats": "统计信息"
+    },
+    "fields": {
+      "projectName": "项目名称",
+      "status": "状态",
+      "tags": "标签",
+      "id": "ID",
+      "createdAt": "创建时间",
+      "updatedAt": "更新时间",
+      "model": "模型",
+      "tagsCount": "标签数量",
+      "objectiveName": "目标名称",
+      "parentProject": "所属项目",
+      "orderIndex": "排序",
+      "testCaseTitle": "用例标题",
+      "riskCategory": "风险分类",
+      "contentLength": "内容长度"
+    }
+  },
+  "notFound": {
+    "title": "页面未找到",
+    "desc": "您访问的页面不存在或已被移除",
+    "back": "返回上页",
+    "home": "返回首页"
+  }
+}

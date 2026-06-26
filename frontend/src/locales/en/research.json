@@ -1,0 +1,194 @@
+{
+  "pageTitle": "Paper Insights",
+  "pageDesc": "AI safety research paper analysis and insights",
+  "loading": "Loading...",
+  "loadingMore": "Loading more...",
+  "noMore": "No more data",
+  "totalCount": "{{count}} papers total",
+  "details": {
+    "notFound": "Paper not found",
+    "notFoundDesc": "Please go back and select again.",
+    "backToList": "Back to Papers",
+    "backShort": "Back",
+    "tagsLabel": "Tags:",
+    "openLink": "Open Paper Link",
+    "copy": "Copy",
+    "like": "Like",
+    "noPapersFoundTitle": "No papers found",
+    "sections": {
+      "authors": "AUTHORS",
+      "abstract": "ABSTRACT",
+      "summary": "SUMMARY",
+      "quickSummary": "Quick Summary",
+      "problem": "Problem",
+      "approach": "Approach",
+      "aiAnalysis": "AI Analysis",
+      "originalPaper": "Original Paper",
+      "noLinksAvailable": "No links available",
+      "highlights": "Highlights",
+      "pros": "Pros",
+      "cons": "Cons",
+      "implementationGuide": "Implementation Guide",
+      "evaluation": "EVALUATION & RATING",
+      "detailedAnalysis": "DETAILED ANALYSIS",
+      "attackMethod": "ATTACK METHOD",
+      "construction": "CONSTRUCTION"
+    }
+  },
+  "toasts": {
+    "copied": "Copied to clipboard",
+    "copyFailed": "Copy failed",
+    "generating": "Generating in cloud...",
+    "generateSuccess": "Generated",
+    "generateFailed": "Generation failed",
+    "resultCopied": "Result copied",
+    "copyFailedManual": "Copy failed, please copy manually"
+  },
+  "table": {
+    "headers": {
+      "title": "Paper Title",
+      "authors": "Authors",
+      "year": "Year",
+      "tags": "Tags",
+      "actions": "Actions"
+    },
+    "empty": "No papers"
+  },
+  "list": {
+    "scrollToLoad": "Scroll to load more • {{count}} papers"
+  },
+  "actions": {
+    "view": "View",
+    "download": "Download PDF",
+    "newPaper": "New Paper",
+    "readInsight": "Read Insight"
+  },
+  "status": {
+    "pending": "Pending",
+    "processing": "Processing",
+    "completed": "Completed",
+    "failed": "Failed"
+  },
+  "aggregationPageTitle": "Information Aggregation",
+  "aggregationPageDesc": "Aggregate and curate key information from research, reports, and resources.",
+  "aggregationEmpty": "No content yet.",
+  "generation": {
+    "pageTitle": "AI Generation",
+    "pageDesc": "Generate jailbreak prompts based on paper methodologies",
+    "arxivLabel": "arXiv",
+    "noPaperId": "No paper ID specified",
+    "noPaperIdDesc": "Please select a paper from Paper Insights to use this feature.",
+    "backToPapers": "Back to Papers",
+    "paperNotFound": "Paper not found",
+    "paperNotFoundDesc": "The specified paper could not be found.",
+    "form": {
+      "harmfulQuestion": "Harmful Question",
+      "harmfulQuestionPlaceholder": "Enter the harmful question you want to construct based on this paper...",
+      "generate": "Generate",
+      "generating": "Generating...",
+      "cancel": "Cancel"
+    },
+    "result": {
+      "title": "Generation Result",
+      "desc": "The following is the generated jailbreak prompt.",
+      "copy": "Copy",
+      "close": "Close"
+    },
+    "error": {
+      "title": "Generation Failed",
+      "desc": "An error occurred during generation.",
+      "ok": "OK"
+    },
+    "toasts": {
+      "generating": "Generating in cloud...",
+      "success": "Generation completed",
+      "failed": "Generation failed",
+      "copied": "Result copied",
+      "copyFailed": "Copy failed, please copy manually"
+    }
+  },
+  "aggregation": {
+    "totalCount": "{{count}} items",
+    "highValue": "High Value",
+    "viewInsights": "Insights",
+    "viewActions": "Actions",
+    "controls": {
+      "simPlan": "Simulate plan",
+      "languageAny": "Any language",
+      "topicPlaceholder": "Topic category",
+      "highValueOnly": "High value only",
+      "minScore": "Min Score",
+      "usefulnessMin": "Usefulness ≥",
+      "sort": "Sort",
+      "sortNewest": "Newest first",
+      "sortOldest": "Oldest first"
+    },
+    "fields": {
+      "source": "Source",
+      "category": "Category",
+      "summary": "Summary",
+      "metrics": "Key Metrics",
+      "link": "Reference",
+      "highValue": "High Value",
+      "createdAt": "Created at",
+      "language": "Language",
+      "tags": "Tags",
+      "tweetUrl": "Tweet",
+      "openTweet": "Open Tweet",
+      "relevanceScore": "Relevance Score",
+      "qualityScore": "Quality Score",
+      "usefulnessScore": "Usefulness Score",
+      "useful": "Useful",
+      "relevant": "Relevant",
+      "quality": "Quality",
+      "insights": "Insights",
+      "aiAnalysis": "AI Analysis",
+      "recommendedActions": "Recommended Actions",
+      "actionItems": "Action Items",
+      "llmModel": "LLM Model",
+      "llmTemperature": "LLM Temperature"
+    },
+    "actions": {
+      "viewSource": "View Source"
+    },
+    "visibility": {
+      "locked": "Locked",
+      "requiresPlan": "Requires {{plan}} or higher"
+    },
+    "moreTags": "+{{count}}",
+    "samples": {
+      "card1": {
+        "title": "RLAIF Overview",
+        "source": "Anthropic",
+        "category": "RL from AI Feedback",
+        "summary": "High-level summary of the RLAIF technique and adoption.",
+        "metrics": "Reduction in harmful outputs (mock).",
+        "link": "Anthropic paper overview"
+      },
+      "card2": {
+        "title": "Safety Spec Guidelines",
+        "source": "OpenAI",
+        "category": "Guideline",
+        "summary": "Safety policies and evaluation surfaces for LLMs.",
+        "metrics": "Spec coverage metrics (mock).",
+        "link": "OpenAI safety spec"
+      },
+      "card3": {
+        "title": "Red Teaming Patterns",
+        "source": "Community",
+        "category": "Red Team",
+        "summary": "Common jailbreak patterns and mitigations.",
+        "metrics": "Block rate on benchmarks (mock).",
+        "link": "Pattern catalog"
+      },
+      "card4": {
+        "title": "Evaluation Reports Digest",
+        "source": "Lack",
+        "category": "Report",
+        "summary": "Curated highlights from recent evaluation reports.",
+        "metrics": "Top risks and key changes (mock).",
+        "link": "Internal digest"
+      }
+    }
+  }
+}

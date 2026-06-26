@@ -1,0 +1,140 @@
+id: gitlab-user-enum
+
+info:
+  name: GitLab - User Enumeration
+  author: Suman_Kar
+  severity: info
+  reference:
+    - https://github.com/danielmiessler/SecLists/blob/master/Usernames/Names/malenames-usa-top1000.txt
+  metadata:
+    max-request: 100
+    shodan-query: http.title:"GitLab"
+  tags: gitlab,enum,misconfig,fuzz,vuln
+
+http:
+  - raw:
+      - |
+        GET /users/{{user}}/exists HTTP/1.1
+        Host: {{Hostname}}
+        Accept: application/json, text/plain, */*
+        Referer: {{BaseURL}}
+
+    payloads:
+      user:
+        - "root"
+        - "admin"
+        - "administrator"
+        - "test"
+        - "user"
+        - "guest"
+        - "demo"
+        - "gitlab"
+        - "support"
+        - "dev"
+        - "developer"
+        - "ops"
+        - "operator"
+        - "service"
+        - "ci"
+        - "cd"
+        - "build"
+        - "deploy"
+        - "bot"
+        - "automation"
+        - "security"
+        - "scanner"
+        - "qa"
+        - "staging"
+        - "production"
+        - "prod"
+        - "test1"
+        - "user1"
+        - "admin1"
+        - "backup"
+        - "monitor"
+        - "monitoring"
+        - "sysadmin"
+        - "it"
+        - "helpdesk"
+        - "manager"
+        - "owner"
+        - "maintainer"
+        - "release"
+        - "runner"
+        - "jenkins"
+        - "git"
+        - "gituser"
+        - "deploybot"
+        - "serviceaccount"
+        - "svc"
+        - "api"
+        - "web"
+        - "app"
+        - "application"
+        - "john"
+        - "jane"
+        - "alice"
+        - "bob"
+        - "charlie"
+        - "david"
+        - "michael"
+        - "sarah"
+        - "mark"
+        - "paul"
+        - "peter"
+        - "tom"
+        - "james"
+        - "robert"
+        - "william"
+        - "richard"
+        - "joseph"
+        - "thomas"
+        - "christopher"
+        - "daniel"
+        - "matthew"
+        - "anthony"
+        - "donald"
+        - "steven"
+        - "andrew"
+        - "joshua"
+        - "kenneth"
+        - "kevin"
+        - "brian"
+        - "george"
+        - "edward"
+        - "ronald"
+        - "timothy"
+        - "jason"
+        - "jeffrey"
+        - "ryan"
+        - "jacob"
+        - "gary"
+        - "nicholas"
+        - "eric"
+        - "jonathan"
+        - "stephen"
+        - "larry"
+        - "justin"
+        - "scott"
+        - "brandon"
+        - "benjamin"
+        - "samuel"
+        - "gregory"
+        - "frank"
+    stop-at-first-match: true
+
+    matchers-condition: and
+    matchers:
+      - type: regex
+        part: body
+        regex:
+          - "exists.*:true"
+
+      - type: status
+        status:
+          - 200
+
+      - type: word
+        part: header
+        words:
+          - "application/json"

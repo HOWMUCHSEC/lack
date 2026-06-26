@@ -1,0 +1,11 @@
+{
+  "toast": {
+    "loading": "正在加载云端数据...",
+    "success": "数据加载成功",
+    "error": "加载数据失败"
+  },
+  "errors": {
+    "invalidFormat": "数据格式错误：期望数组",
+    "loadFailed": "加载失败:"
+  }
+}

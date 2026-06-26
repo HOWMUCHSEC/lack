@@ -1,0 +1,127 @@
+{
+  "list": {
+    "breadcrumb": "Projects",
+    "pageTitle": "All Projects",
+    "pageDesc": "View and manage all test projects",
+    "loading": "Loading...",
+    "table": {
+      "headers": {
+        "name": "Project Name",
+        "status": "Status",
+        "tags": "Tags",
+        "createdAt": "Created At",
+        "actions": "Actions"
+      },
+      "empty": "No projects. Click \"New Project\" to create one.",
+      "emptyDesc": "Create a new project to get started",
+      "idPrefix": "ID: "
+    },
+    "status": {
+      "active": "Active",
+      "completed": "Completed",
+      "paused": "Paused"
+    },
+    "actions": {
+      "newProject": "New Project",
+      "view": "View",
+      "edit": "Edit",
+      "delete": "Delete"
+    },
+    "deleteConfirm": {
+      "title": "Delete Project",
+      "description": "This action cannot be undone. Are you sure?"
+    },
+    "searchPlaceholder": "Search projects...",
+    "toasts": {
+      "loadFailed": "Failed to load projects",
+      "loadFailedWithMsg": "Failed to load projects: {{message}}",
+      "deleted": "Project deleted",
+      "deleteFailed": "Failed to delete"
+    },
+    "tags": {
+      "more": "+{{count}}"
+    }
+  },
+  "templates": {
+    "breadcrumb": "Project Templates",
+    "pageTitle": "Project Templates",
+    "pageDesc": "Quickly create standardized test projects",
+    "usage": "{{count}} uses",
+    "searchPlaceholder": "Search templates...",
+    "table": {
+      "headers": {
+        "name": "Template Name",
+        "description": "Description",
+        "tags": "Tags",
+        "usageCount": "Usage Count",
+        "actions": "Actions"
+      },
+      "empty": "No templates"
+    },
+    "actions": {
+      "newTemplate": "New Template",
+      "useTemplate": "Use Template",
+      "edit": "Edit",
+      "delete": "Delete"
+    },
+    "dialog": {
+      "createTitle": "New Project Template",
+      "editTitle": "Edit Template",
+      "description": "Create reusable project templates",
+      "nameLabel": "Template Name",
+      "namePlaceholder": "e.g.: Standard Security Test Template",
+      "descriptionLabel": "Template Description",
+      "descriptionPlaceholder": "Describe the purpose and test scenarios included in this template",
+      "tagsLabel": "Tags",
+      "tagsPlaceholder": "Separate with commas",
+      "cancel": "Cancel",
+      "create": "Create Template",
+      "save": "Save Changes"
+    },
+    "deleteDialog": {
+      "title": "Confirm Delete Template",
+      "description": "Template data cannot be recovered after deletion. Are you sure you want to continue?"
+    },
+    "toasts": {
+      "loadError": "Failed to load templates",
+      "loadErrorWithMsg": "Failed to load templates: {{message}}",
+      "deleteSuccess": "Template deleted",
+      "deleteFailed": "Delete failed",
+      "nameRequired": "Please fill in the template name",
+      "loginRequired": "Please log in first",
+      "updateSuccess": "Template updated successfully",
+      "createSuccess": "Template created successfully",
+      "saveFailed": "Save failed"
+    }
+  },
+  "form": {
+    "createTitle": "New Project",
+    "editTitle": "Edit Project",
+    "createDesc": "Create a new project for management",
+    "editDesc": "Modify project information",
+    "nameLabel": "Project Name",
+    "namePlaceholder": "e.g.: GPT-4 Security Test",
+    "statusLabel": "Status",
+    "tagsLabel": "Tags",
+    "tagsPlaceholder": "Separate with commas, e.g.: Security, Baseline",
+    "descriptionLabel": "Project Description",
+    "descriptionPlaceholder": "Describe the testing objectives and scope",
+    "cancel": "Cancel",
+    "saving": "Saving...",
+    "create": "Create Project",
+    "save": "Save Changes",
+    "status": {
+      "active": "Active",
+      "paused": "Paused",
+      "completed": "Completed"
+    },
+    "toasts": {
+      "nameRequired": "Please enter project name",
+      "loginRequired": "Please log in first",
+      "loadFailed": "Failed to load project information",
+      "updateSuccess": "Project updated successfully",
+      "createSuccess": "Project created successfully",
+      "saveFailed": "Save failed"
+    }
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "general": {
+    "description": "Generate high-quality general-purpose text with large language models in real time"
+  },
+  "advanced": {
+    "description": "Structured data processing and advanced AI workflow orchestration tools"
+  },
+  "common": {
+    "copyCode": "Copy code",
+    "copySuccess": "Copied successfully",
+    "reset": "Reset"
+  },
+  "workspace": {
+    "inputTitle": "Multiline text input",
+    "inputPlaceholder": "Enter source text for {{title}}...",
+    "configTitle": "Configuration",
+    "advancedConfig": "{{title}} advanced parameters",
+    "execute": "Generate / Run task",
+    "resultTitle": "Execution result (Model output)",
+    "resultDescription": "{{title}} has completed. The model output is shown below.",
+    "resultPlaceholder": "Model execution output appears here...\n(Placeholder text; replace with real returned data in production.)"
+  },
+  "tabs": {
+    "textConversion": {
+      "title": "Text Conversion",
+      "description": "Convert plain text into a specific format or encoding type."
+    },
+    "emoji": {
+      "title": "Emoji",
+      "description": "Parse and inject relevant emoji to improve text expressiveness."
+    },
+    "inputPerturbation": {
+      "title": "Input Perturbation",
+      "description": "Apply synonym replacement or special-character noise to test robustness."
+    },
+    "charMapping": {
+      "title": "Character Mapping",
+      "description": "Use custom character maps to replace text at the encoding layer."
+    },
+    "splitter": {
+      "title": "Splitter",
+      "description": "Split long text precisely by semantics or custom rules."
+    },
+    "aiRewrite": {
+      "title": "AI Rewrite",
+      "description": "Use model capabilities to rewrite existing text while preserving meaning."
+    },
+    "ancientStyle": {
+      "title": "Classical Style",
+      "description": "Transform modern plain language into poetic classical-style writing."
+    },
+    "multiTurnTemplate": {
+      "title": "Multi-turn Template",
+      "description": "Orchestrate and test multi-turn prompt templates and complex system-level injection."
+    },
+    "asciiSmuggling": {
+      "title": "ASCII Smuggling"
+    },
+    "imageInjection": {
+      "title": "Image Injection",
+      "description": "Inject images with special instructions or adversarial samples into multimodal input."
+    },
+    "audioInjection": {
+      "title": "Audio Injection",
+      "description": "Generate audio data with specific frequencies or hidden voice instructions."
+    },
+    "richTextInjection": {
+      "title": "Rich Text Injection",
+      "description": "Embed malicious or probing structured tags in HTML or Markdown."
+    },
+    "docxInjection": {
+      "title": "DOCX Injection",
+      "description": "Manipulate Office Open XML structures to inject remote templates or special instructions."
+    },
+    "pdfInjection": {
+      "title": "PDF Injection",
+      "description": "Inject obfuscated scripts or probe links into PDF document objects."
+    }
+  },
+  "ascii": {
+    "visibleText": {
+      "title": "Visible text",
+      "description": "This is the content shown to readers. Hidden payloads can be attached before, after, or inside it.",
+      "placeholder": "This is normal visible text used to carry hidden content."
+    },
+    "insertSettings": {
+      "title": "Insertion settings",
+      "positionLabel": "Insertion position",
+      "positionPlaceholder": "Choose insertion position",
+      "positions": {
+        "append": "Append to end",
+        "prepend": "Prepend to start",
+        "middle": "Insert randomly in the middle"
+      },
+      "encodingLabel": "Encoding mode",
+      "encodingPlaceholder": "Choose encoding mode",
+      "encodings": {
+        "auto": "Automatic",
+        "base64": "Force Base64",
+        "raw": "Raw ASCII"
+      }
+    },
+    "hiddenPayload": {
+      "title": "Hidden payload",
+      "description": "The content to hide. Automatic mode switches to Base64 when needed, so it can handle Chinese or non-ASCII characters.",
+      "placeholder": "Enter content to hide..."
+    },
+    "quickActions": {
+      "title": "Quick actions",
+      "placeholderLabel": "Action placeholder",
+      "write": "Write smuggled text"
+    },
+    "result": {
+      "statsTitle": "Detection stats",
+      "payloadCount": "Found {{count}} payloads and {{chars}} hidden characters",
+      "visibleLength": "Visible text length {{count}}",
+      "firstPayloadTitle": "First payload",
+      "emptyPayload": "No hidden content has been parsed yet",
+      "placeholder": "Generated output will appear here for direct copying or export."
+    }
+  }
+}

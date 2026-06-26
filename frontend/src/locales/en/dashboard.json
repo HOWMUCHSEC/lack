@@ -1,0 +1,84 @@
+{
+  "stats": {
+    "activeProjects": "Active Projects",
+    "activeObjectives": "Active Objectives",
+    "runningTasks": "Running Tasks",
+    "highRiskDetections": "High-risk Detections",
+    "todayCompleted": "Completed Today",
+    "current": "Current",
+    "runningNow": "Running now",
+    "idle": "Idle",
+    "needsReview": "Needs review",
+    "clear": "Clear"
+  },
+  "vsLastWeek": "vs last week",
+  "recentTasks": {
+    "title": "Recent Task Runs",
+    "viewAll": "View All",
+    "headers": {
+      "executionTime": "Execution Time",
+      "project": "Project",
+      "objective": "Objective",
+      "task": "Task",
+      "testCases": "Test Cases",
+      "result": "Result",
+      "actions": "Actions"
+    },
+    "loading": "Loading...",
+    "empty": "No records",
+    "actions": {
+      "viewDetails": "View Details",
+      "retest": "Retest",
+      "downloadReport": "Download Report"
+    },
+    "relative": {
+      "na": "-",
+      "justNow": "Just now",
+      "minutesAgo": "{{count}} minutes ago",
+      "hoursAgo": "{{count}} hours ago",
+      "daysAgo": "{{count}} days ago"
+    }
+  },
+  "projectProgress": {
+    "title": "Project Progress Overview",
+    "viewAllProjects": "View All Projects",
+    "loading": "Loading project progress...",
+    "empty": "No projects yet",
+    "modelUnknown": "No model",
+    "noObjectives": "No objectives linked"
+  },
+  "taskTrend": {
+    "title": "Task Execution Trend"
+  },
+  "riskDistribution": {
+    "title": "Risk Distribution",
+    "low": "Low Risk",
+    "medium": "Medium Risk",
+    "high": "High Risk"
+  },
+  "systemNormal": "System Normal",
+  "vulnerabilityOverview": "Vulnerability Overview",
+  "currentSecurityPosture": "Current Security Posture",
+  "total": "Total",
+  "last30DaysActivity": "Last 30 Days Activity",
+  "updatesEvery5Min": "Updates every 5 minutes",
+  "objectiveCompletion": {
+    "title": "Objective Completion Rate",
+    "completed": "Completed: {{completed}}/{{total}}",
+    "loading": "Loading objectives...",
+    "empty": "No objectives yet",
+    "byStatus": "By Status",
+    "byType": "By Type",
+    "status": {
+      "active": "Active",
+      "completed": "Completed",
+      "paused": "Paused"
+    },
+    "types": {
+      "violence": "Violence Detection",
+      "pornography": "Pornography Filter",
+      "hateSpeech": "Hate Speech Detection",
+      "privacyLeak": "Privacy Leak Risk"
+    }
+  }
+}

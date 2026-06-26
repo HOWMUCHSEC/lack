@@ -1,0 +1,144 @@
+id: gitlab-api-user-enum
+
+info:
+  name: GitLab - User Information Disclosure Via Open API
+  author: Suman_Kar
+  severity: medium
+  description: GitLab - User Information is exposed Via Open API.
+  reference:
+    - https://gitlab.com/gitlab-org/gitlab-foss/-/issues/40158
+  metadata:
+    max-request: 100
+    shodan-query: http.title:"GitLab"
+  tags: gitlab,enum,misconfig,disclosure,vuln
+
+http:
+  - raw:
+      - |
+        GET /api/v4/users/{{uid}} HTTP/1.1
+        Host: {{Hostname}}
+        Accept: application/json, text/plain, */*
+        Referer: {{BaseURL}}
+
+    payloads:
+      uid:
+        - "1"
+        - "2"
+        - "3"
+        - "4"
+        - "5"
+        - "6"
+        - "7"
+        - "8"
+        - "9"
+        - "10"
+        - "11"
+        - "12"
+        - "13"
+        - "14"
+        - "15"
+        - "16"
+        - "17"
+        - "18"
+        - "19"
+        - "20"
+        - "21"
+        - "22"
+        - "23"
+        - "24"
+        - "25"
+        - "26"
+        - "27"
+        - "28"
+        - "29"
+        - "30"
+        - "31"
+        - "32"
+        - "33"
+        - "34"
+        - "35"
+        - "36"
+        - "37"
+        - "38"
+        - "39"
+        - "40"
+        - "41"
+        - "42"
+        - "43"
+        - "44"
+        - "45"
+        - "46"
+        - "47"
+        - "48"
+        - "49"
+        - "50"
+        - "51"
+        - "52"
+        - "53"
+        - "54"
+        - "55"
+        - "56"
+        - "57"
+        - "58"
+        - "59"
+        - "60"
+        - "61"
+        - "62"
+        - "63"
+        - "64"
+        - "65"
+        - "66"
+        - "67"
+        - "68"
+        - "69"
+        - "70"
+        - "71"
+        - "72"
+        - "73"
+        - "74"
+        - "75"
+        - "76"
+        - "77"
+        - "78"
+        - "79"
+        - "80"
+        - "81"
+        - "82"
+        - "83"
+        - "84"
+        - "85"
+        - "86"
+        - "87"
+        - "88"
+        - "89"
+        - "90"
+        - "91"
+        - "92"
+        - "93"
+        - "94"
+        - "95"
+        - "96"
+        - "97"
+        - "98"
+        - "99"
+        - "100"
+    stop-at-first-match: true
+
+    matchers-condition: and
+    matchers:
+      - type: regex
+        part: body
+        condition: and
+        regex:
+          - "username.*"
+          - "id.*"
+          - "name.*"
+
+      - type: word
+        part: header
+        words:
+          - "application/json"
+
+      - type: status
+        status:
+          - 200

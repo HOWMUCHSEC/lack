@@ -1,0 +1,194 @@
+{
+  "pageTitle": "论文解读",
+  "pageDesc": "AI安全相关论文解读与分析",
+  "loading": "加载中...",
+  "loadingMore": "加载更多...",
+  "noMore": "没有更多数据了",
+  "totalCount": "共 {{count}} 篇论文",
+  "details": {
+    "notFound": "未找到论文",
+    "notFoundDesc": "请返回列表重新选择。",
+    "backToList": "返回论文列表",
+    "backShort": "返回列表",
+    "tagsLabel": "标签：",
+    "openLink": "打开论文链接",
+    "copy": "复制",
+    "like": "赞",
+    "noPapersFoundTitle": "未找到论文",
+    "sections": {
+      "authors": "作者",
+      "abstract": "摘要",
+      "summary": "总结",
+      "quickSummary": "快速摘要",
+      "problem": "问题",
+      "approach": "方法",
+      "aiAnalysis": "AI 分析",
+      "originalPaper": "原始论文",
+      "noLinksAvailable": "暂无链接",
+      "highlights": "亮点",
+      "pros": "优点",
+      "cons": "缺点",
+      "implementationGuide": "实施指南",
+      "evaluation": "评价与评分",
+      "detailedAnalysis": "详细分析",
+      "attackMethod": "攻击方法",
+      "construction": "构造方法"
+    }
+  },
+  "toasts": {
+    "copied": "已复制到剪贴板",
+    "copyFailed": "复制失败",
+    "generating": "正在云端生成...",
+    "generateSuccess": "生成成功",
+    "generateFailed": "生成失败",
+    "resultCopied": "生成结果已复制",
+    "copyFailedManual": "复制失败，请手动复制"
+  },
+  "table": {
+    "headers": {
+      "title": "论文标题",
+      "authors": "作者",
+      "year": "年份",
+      "tags": "标签",
+      "actions": "操作"
+    },
+    "empty": "暂无论文"
+  },
+  "list": {
+    "scrollToLoad": "向下滑动加载更多 • 共 {{count}} 篇"
+  },
+  "actions": {
+    "view": "查看",
+    "download": "下载PDF",
+    "newPaper": "新建论文",
+    "readInsight": "阅读洞察"
+  },
+  "status": {
+    "pending": "待解读",
+    "processing": "解读中",
+    "completed": "已完成",
+    "failed": "失败"
+  },
+  "aggregationPageTitle": "信息聚合",
+  "aggregationPageDesc": "聚合与整理来自研究、报告与外部资源的关键信息。",
+  "aggregationEmpty": "暂无内容。",
+  "generation": {
+    "pageTitle": "智能生成",
+    "pageDesc": "基于论文方法论生成越狱提示词",
+    "arxivLabel": "arXiv",
+    "noPaperId": "未指定论文",
+    "noPaperIdDesc": "请从论文解读中选择一篇论文使用此功能。",
+    "backToPapers": "返回论文列表",
+    "paperNotFound": "论文未找到",
+    "paperNotFoundDesc": "指定的论文不存在。",
+    "form": {
+      "harmfulQuestion": "有害问题",
+      "harmfulQuestionPlaceholder": "请输入你希望基于该论文构造的有害问题...",
+      "generate": "生成",
+      "generating": "生成中...",
+      "cancel": "取消"
+    },
+    "result": {
+      "title": "生成结果",
+      "desc": "以下为生成的越狱提示词。",
+      "copy": "复制",
+      "close": "关闭"
+    },
+    "error": {
+      "title": "生成失败",
+      "desc": "生成过程中发生错误。",
+      "ok": "知道了"
+    },
+    "toasts": {
+      "generating": "正在云端生成...",
+      "success": "生成完成",
+      "failed": "生成失败",
+      "copied": "生成结果已复制",
+      "copyFailed": "复制失败，请手动复制"
+    }
+  },
+  "aggregation": {
+    "totalCount": "共 {{count}} 条",
+    "highValue": "高价值",
+    "viewInsights": "查看洞察",
+    "viewActions": "推荐行动",
+    "controls": {
+      "simPlan": "模拟计划",
+      "languageAny": "不限语言",
+      "topicPlaceholder": "主题类别",
+      "highValueOnly": "仅高价值",
+      "minScore": "最低评分",
+      "usefulnessMin": "有用性 ≥",
+      "sort": "排序",
+      "sortNewest": "最新优先",
+      "sortOldest": "最旧优先"
+    },
+    "fields": {
+      "source": "来源",
+      "category": "类别",
+      "summary": "摘要",
+      "metrics": "关键指标",
+      "link": "参考",
+      "highValue": "高价值",
+      "createdAt": "创建时间",
+      "language": "语言",
+      "tags": "标签",
+      "tweetUrl": "推文",
+      "openTweet": "打开推文",
+      "relevanceScore": "相关性得分",
+      "qualityScore": "质量得分",
+      "usefulnessScore": "有用性得分",
+      "useful": "有用性",
+      "relevant": "相关性",
+      "quality": "质量",
+      "insights": "关键洞见",
+      "aiAnalysis": "AI 分析",
+      "recommendedActions": "推荐行动",
+      "actionItems": "行动项",
+      "llmModel": "LLM 模型",
+      "llmTemperature": "LLM 温度"
+    },
+    "actions": {
+      "viewSource": "查看来源"
+    },
+    "visibility": {
+      "locked": "已锁定",
+      "requiresPlan": "需要 {{plan}} 或更高"
+    },
+    "moreTags": "+{{count}}",
+    "samples": {
+      "card1": {
+        "title": "RLAIF 概览",
+        "source": "Anthropic",
+        "category": "基于 AI 反馈的强化学习",
+        "summary": "RLAIF 技术与应用的概览。",
+        "metrics": "有害输出下降（模拟）",
+        "link": "Anthropic 论文概览"
+      },
+      "card2": {
+        "title": "安全规范指引",
+        "source": "OpenAI",
+        "category": "指南",
+        "summary": "LLM 安全策略与评估面。",
+        "metrics": "规范覆盖率指标（模拟）",
+        "link": "OpenAI 安全规范"
+      },
+      "card3": {
+        "title": "红队对抗模式",
+        "source": "社区",
+        "category": "红队",
+        "summary": "常见越狱手法与缓解。",
+        "metrics": "基准阻断率（模拟）",
+        "link": "模式目录"
+      },
+      "card4": {
+        "title": "评测报告速览",
+        "source": "Lack",
+        "category": "报告",
+        "summary": "近期评测报告要点集锦。",
+        "metrics": "主要风险与关键变化（模拟）",
+        "link": "内部摘要"
+      }
+    }
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "app": {
+    "name": "Lack",
+    "error": "An error occurred"
+  },
+  "language": {
+    "en": "English",
+    "zh-CN": "简体中文"
+  },
+  "siteHeader": {
+    "title": "Documents",
+    "github": "GitHub"
+  },
+  "common": {
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "refresh": "Refresh",
+    "close": "Close",
+    "colon": ": ",
+    "more": "More",
+    "open": "Open",
+    "share": "Share",
+    "view": "View",
+    "edit": "Edit",
+    "plan": {
+      "trial": "Trial",
+      "pro": "Pro",
+      "team": "Team"
+    }
+  },
+  "mode": {
+    "oneclick": "Quick",
+    "pro": "Pro",
+    "quickStart": "Quick Start",
+    "historyReports": "History Reports"
+  },
+  "navUser": {
+    "upgradePro": "Upgrade to Pro",
+    "accountSettings": "Account Settings",
+    "language": "Language",
+    "theme": "Theme",
+    "themeLight": "Light",
+    "themeDark": "Dark",
+    "themeSystem": "System",
+    "signOut": "Sign out"
+  },
+  "sidebar": {
+    "title": "Sidebar",
+    "description": "Displays the mobile sidebar.",
+    "expandAll": "Expand All",
+    "collapseAll": "Collapse All"
+  },
+  "toasts": {
+    "loadingCloudData": "Loading cloud data...",
+    "success": "Success",
+    "error": "Error",
+    "processing": "Processing..."
+  },
+  "teamSwitcher": {
+    "teams": "Teams",
+    "contact": "Contact",
+    "email": "Email: {{id}}"
+  },
+  "chart": {
+    "totalVisitors": "Total Visitors",
+    "totalForLast3Months": "Total for the last 3 months",
+    "last3Months": "Last 3 months",
+    "last30Days": "Last 30 days",
+    "last7Days": "Last 7 days",
+    "visitors": "Visitors",
+    "desktop": "Desktop",
+    "mobile": "Mobile"
+  },
+  "noPermission": {
+    "title": "Permission Denied",
+    "gotIt": "Got It",
+    "upgrade": "Upgrade Plan"
+  },
+  "details": {
+    "sections": {
+      "basic": "Basic Info",
+      "meta": "Metadata",
+      "stats": "Statistics"
+    },
+    "fields": {
+      "projectName": "Project Name",
+      "status": "Status",
+      "tags": "Tags",
+      "id": "ID",
+      "createdAt": "Created At",
+      "updatedAt": "Updated At",
+      "model": "Model",
+      "tagsCount": "Tags Count",
+      "objectiveName": "Objective Name",
+      "parentProject": "Parent Project",
+      "orderIndex": "Order",
+      "testCaseTitle": "Test Case Title",
+      "riskCategory": "Risk Category",
+      "contentLength": "Content Length"
+    }
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "desc": "The page you are looking for does not exist or has been removed",
+    "back": "Go Back",
+    "home": "Home"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "stats": {
+    "activeProjects": "活跃项目",
+    "activeObjectives": "进行中目标",
+    "runningTasks": "运行中任务",
+    "highRiskDetections": "高风险检出",
+    "todayCompleted": "今日完成",
+    "current": "当前",
+    "runningNow": "正在运行",
+    "idle": "空闲",
+    "needsReview": "需要复核",
+    "clear": "无高风险"
+  },
+  "vsLastWeek": "较上周",
+  "recentTasks": {
+    "title": "最近任务执行记录",
+    "viewAll": "查看全部",
+    "headers": {
+      "executionTime": "执行时间",
+      "project": "项目",
+      "objective": "目标",
+      "task": "任务",
+      "testCases": "用例数",
+      "result": "结果",
+      "actions": "操作"
+    },
+    "loading": "加载中...",
+    "empty": "暂无运行记录",
+    "actions": {
+      "viewDetails": "查看详情",
+      "retest": "重新测试",
+      "downloadReport": "下载报告"
+    },
+    "relative": {
+      "na": "-",
+      "justNow": "刚刚",
+      "minutesAgo": "{{count}} 分钟前",
+      "hoursAgo": "{{count}} 小时前",
+      "daysAgo": "{{count}} 天前"
+    }
+  },
+  "projectProgress": {
+    "title": "项目进度概览",
+    "viewAllProjects": "查看所有项目",
+    "loading": "正在加载项目进度...",
+    "empty": "暂无项目",
+    "modelUnknown": "未配置模型",
+    "noObjectives": "暂无关联目标"
+  },
+  "taskTrend": {
+    "title": "任务执行趋势"
+  },
+  "riskDistribution": {
+    "title": "风险分布",
+    "low": "低风险",
+    "medium": "中风险",
+    "high": "高风险"
+  },
+  "systemNormal": "系统正常",
+  "vulnerabilityOverview": "漏洞概览",
+  "currentSecurityPosture": "当前安全态势",
+  "total": "总计",
+  "last30DaysActivity": "近30天活动",
+  "updatesEvery5Min": "每5分钟更新",
+  "objectiveCompletion": {
+    "title": "目标完成率",
+    "completed": "已完成: {{completed}}/{{total}}",
+    "loading": "正在加载目标...",
+    "empty": "暂无目标",
+    "byStatus": "按状态统计",
+    "byType": "按类型统计",
+    "status": {
+      "active": "进行中",
+      "completed": "已完成",
+      "paused": "已暂停"
+    },
+    "types": {
+      "violence": "暴力内容检测",
+      "pornography": "色情内容过滤",
+      "hateSpeech": "仇恨言论识别",
+      "privacyLeak": "隐私泄露风险"
+    }
+  }
+}

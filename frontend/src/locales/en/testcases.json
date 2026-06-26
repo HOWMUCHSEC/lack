@@ -1,0 +1,364 @@
+{
+  "table": {
+    "headers": {
+      "category": "Category/Sub",
+      "prompt": "Prompt",
+      "plan": "Plan",
+      "lang": "Language",
+      "version": "Version",
+      "createdAt": "Created At",
+      "actions": "Actions"
+    },
+    "notGrouped": "Uncategorized",
+    "upgradeToView": "Upgrade to view full Prompt",
+    "versionDefault": "v1",
+    "view": "View",
+    "downloaded": "Downloaded",
+    "update": "Update",
+    "download": "Download"
+  },
+  "pagination": {
+    "summary": "Total {{total}} · Page {{page}}/{{pageCount}}",
+    "prev": "Prev",
+    "next": "Next"
+  },
+  "filters": {
+    "searchPlaceholder": "Search Prompt/Output...",
+    "search": "Search",
+    "downloaded": "Downloaded"
+  },
+  "details": {
+    "title": "Sample Details",
+    "primaryCategory": "Primary Category",
+    "secondaryCategory": "Secondary Category",
+    "prompt": "Prompt",
+    "expectedOutput": "Expected Output",
+    "lang": "Language",
+    "version": "Version",
+    "minPlan": "Min Plan",
+    "createdAt": "Created At"
+  },
+  "categories": {
+    "all": "All",
+    "groups": {
+      "personal-safety": "Personal Safety",
+      "illegal": "Illegal Activities",
+      "misinformation": "Misinformation",
+      "privacy-ip": "Privacy & IP",
+      "behavior": "Behavioral",
+      "other": "Other"
+    },
+    "items": {
+      "violence": {
+        "name": "Violence / Harm",
+        "description": "Descriptive violence, gore, abuse, weapons, assault, kidnapping"
+      },
+      "self-harm": {
+        "name": "Self-Harm / Suicide",
+        "description": "Methods of suicide, self-injury promotion, eating disorders"
+      },
+      "sexual": {
+        "name": "Sexual Content",
+        "description": "Sexual descriptions, solicitation, pornography, CSAM (Zero Tolerance)"
+      },
+      "hate-harassment": {
+        "name": "Hate / Harassment",
+        "description": "Hate speech, dehumanization, bullying, stalking"
+      },
+      "terrorism": {
+        "name": "Terrorism / Extremism",
+        "description": "Propaganda, recruitment, violence promotion, instructional materials"
+      },
+      "illegal-activities": {
+        "name": "Illegal Acts",
+        "description": "Contraband (guns, drugs), hacking, fraud, forgery, paywall bypass"
+      },
+      "biosafety": {
+        "name": "Biosafety / Chemical",
+        "description": "Pathogens, toxins, chemical weapon synthesis"
+      },
+      "cybersecurity": {
+        "name": "Cybersecurity / Malware",
+        "description": "Exploits, ransomware, zero-day, evasion techniques, social engineering"
+      },
+      "health-misinfo": {
+        "name": "Health Misinformation",
+        "description": "False diagnoses, medical advice, anti-vax, pseudoscience"
+      },
+      "legal-finance": {
+        "name": "Legal / Financial",
+        "description": "Specific legal advice, tax evasion, money laundering, insider trading"
+      },
+      "misinfo": {
+        "name": "Disinformation",
+        "description": "Fabrication, fake citations, election misinfo, manipulation"
+      },
+      "political": {
+        "name": "Political Sensitivity",
+        "description": "Voter suppression, manipulation scripts, foreign influence"
+      },
+      "privacy-pii": {
+        "name": "Privacy / PII",
+        "description": "Doxing, personal info leakage, tracking"
+      },
+      "copyright": {
+        "name": "Copyright / IP",
+        "description": "Piracy, DRM circumvention, scraping paid content"
+      },
+      "addiction": {
+        "name": "Addiction / Vices",
+        "description": "Gambling promotion, drug/alcohol abuse tutorials"
+      },
+      "academic-misconduct": {
+        "name": "Academic Misconduct",
+        "description": "Essay writing, cheating, plagiarism, bypassing detectors"
+      },
+      "commercial-abuse": {
+        "name": "Commercial Abuse",
+        "description": "Spam, SEO manipulation, fake reviews, automated abuse"
+      },
+      "age-inappropriate": {
+        "name": "Age Inappropriate",
+        "description": "Content unsuitable for minors, inappropriate interaction"
+      },
+      "multimodal": {
+        "name": "Multimodal / Image",
+        "description": "Deepfakes, gore, nudity detection, PII in images"
+      },
+      "cultural-ethical": {
+        "name": "Cultural / Ethical",
+        "description": "Cultural taboos, offensive content, stereotypes"
+      }
+    }
+  },
+  "library": {
+    "copyTitle": "{{title}} (Copy)",
+    "breadcrumb": "Test Case Library",
+    "pageTitle": "Test Case Library",
+    "pageDesc": "Manage test cases by risk category",
+    "selectCategory": "Select Risk Category",
+    "searchCategory": "Search categories...",
+    "noCategoryFound": "No matching categories",
+    "emptyHint": "No test cases found in this category.",
+    "localCount": "Local",
+    "actions": {
+      "newCase": "New Case",
+      "generate": "Generate",
+      "view": "View",
+      "edit": "Edit",
+      "copy": "Copy",
+      "enable": "Enable",
+      "disable": "Disable",
+      "delete": "Delete"
+    },
+    "table": {
+      "headers": {
+        "title": "Title",
+        "summary": "Summary",
+        "severity": "Severity",
+        "status": "Status",
+        "category": "Category",
+        "actions": "Actions"
+      },
+      "emptyByCategory": "No test cases in {{name}}"
+    },
+    "severity": {
+      "critical": "Critical",
+      "high": "High",
+      "medium": "Medium",
+      "low": "Low"
+    },
+    "status": {
+      "active": "Active",
+      "inactive": "Inactive"
+    },
+    "toasts": {
+      "loadFailed": "Failed to load test cases",
+      "loadFailedWithMsg": "Failed to load: {{message}}",
+      "deleted": "Test case deleted",
+      "deleteFailed": "Delete failed",
+      "toggledOn": "Enabled",
+      "toggledOff": "Disabled",
+      "copySuccess": "Copied",
+      "copyFailed": "Copy failed",
+      "pleaseLogin": "Please login first"
+    },
+    "deleteDialog": {
+      "title": "Delete Test Case",
+      "description": "This action cannot be undone. Are you sure?"
+    }
+  },
+  "variables": {
+    "breadcrumb": {
+      "parent": "Test Management",
+      "current": "Variables"
+    },
+    "pageTitle": "Variable Management",
+    "pageDesc": "Manage variables for substitution in samples and templates using {{name}}",
+    "loading": "Loading...",
+    "actions": {
+      "new": "New Variable"
+    },
+    "table": {
+      "headers": {
+        "name": "Name",
+        "value": "Value",
+        "status": "Status",
+        "description": "Description",
+        "updatedAt": "Updated At"
+      },
+      "empty": "No variables found"
+    },
+    "status": {
+      "enabled": "Enabled",
+      "disabled": "Disabled"
+    },
+    "sensitive": "Sensitive",
+    "dialog": {
+      "title": "New Variable",
+      "description": "Create a variable for use in templates via {{name}}.",
+      "fields": {
+        "name": "Name",
+        "value": "Value",
+        "status": "Status",
+        "description": "Description"
+      },
+      "create": "Create"
+    },
+    "toasts": {
+      "loadFailedWithMsg": "Failed to load variables: {{message}}",
+      "nameRequired": "Name is required",
+      "valueRequired": "Value is required",
+      "pleaseLogin": "Please login first",
+      "created": "Variable created",
+      "createFailedWithMsg": "Creation failed: {{message}}"
+    }
+  },
+  "localSets": {
+    "breadcrumb": {
+      "parent": "Test Management",
+      "current": "Local Library"
+    },
+    "pageTitle": "Local Library",
+    "pageDesc": "View samples saved to local database",
+    "table": {
+      "headers": {
+        "title": "Title",
+        "promptPreview": "Prompt Preview",
+        "key": "Key",
+        "actions": "Actions"
+      },
+      "empty": "No data",
+      "untitled": "Untitled"
+    },
+    "actions": {
+      "delete": "Delete"
+    },
+    "toasts": {
+      "loadFailed": "Failed to load local samples: {{message}}",
+      "deleted": "Deleted",
+      "deleteFailed": "Delete failed: {{message}}"
+    }
+  },
+  "setsStore": {
+    "breadcrumb": {
+      "parent": "Test Management",
+      "current": "Sample Sets"
+    },
+    "pageTitle": "Community Sets",
+    "pageDesc": "Sync samples from cloud, filter by category",
+    "selectStage": "Select Stage",
+    "allStages": "All Stages",
+    "selectVendor": "Select Vendor",
+    "allVendors": "All Vendors",
+    "selectLv1": "Select Category",
+    "selectLv2": "Select Subcategory",
+    "allCategories": "All Categories",
+    "allSubCategories": "All Subcategories",
+    "searchPlaceholder": "Search Prompt/Output...",
+    "loading": "Loading...",
+    "empty": "No data",
+    "loadFailed": "Failed to load data",
+    "loadFailedWithMsg": "Failed to load: {{message}}",
+    "loadCategoriesFailed": "Failed to load categories",
+    "loadCategoriesFailedWithMsg": "Failed to load categories: {{message}}",
+    "loadLocalFailed": "Failed to load local samples",
+    "loadLocalFailedWithMsg": "Failed to load local: {{message}}",
+    "downloadSuccess": "Saved to local database",
+    "downloadFailed": "Save failed",
+    "downloadFailedWithMsg": "Save failed: {{message}}",
+    "viewLocalSets": "View Local Library",
+    "noPermission": "Insufficient permission",
+    "noPermViewContent": "Plan ({{plan}}) cannot view this content. Requires {{minPlan}}.",
+    "noPermDownloadContent": "Plan ({{plan}}) cannot download this content. Requires {{minPlan}}.",
+    "noAccessHint": "No access permission",
+    "noAccessMessage": "You do not have permission to access cloud samples.",
+    "detailsTitle": "Sample Details",
+    "promptText": "Prompt Content",
+    "expectedOutput": "Expected Output",
+    "table": {
+      "stage": "Stage",
+      "category": "Category",
+      "mutation": "Mutation",
+      "loader": "Loader",
+      "promptText": "Prompt",
+      "expectedOutput": "Expected Output",
+      "actions": "Actions"
+    },
+    "detail": {
+      "stage": "Stage",
+      "mutation": "Mutation Method",
+      "loader": "Loader",
+      "lang": "Language",
+      "finalPrompt": "Final Prompt",
+      "promptHash": "Prompt Hash",
+      "fatherHash": "Parent Hash",
+      "riskLevel": "Risk Level"
+    }
+  },
+  "form": {
+    "createTitle": "New Test Case",
+    "editTitle": "Edit Test Case",
+    "createDesc": "Create a new security test case",
+    "editDesc": "Modify test case information",
+    "categoryLabel": "Risk Category",
+    "severityLabel": "Severity",
+    "titleLabel": "Title",
+    "titlePlaceholder": "e.g. Direct Violence Test",
+    "contentLabel": "Content",
+    "contentPlaceholder": "Enter test prompt or scenario",
+    "contentHint": "Input for LLM testing, supports {{variable}} substitution",
+    "detectedVars": "Detected Variables",
+    "generateSamples": "Generate Samples",
+    "untitledTestCase": "Untitled Case",
+    "expectedLabel": "Expected Response",
+    "expectedPlaceholder": "Describe expected safe response or refusal",
+    "expectedHint": "How the model should safely handle this case",
+    "statusLabel": "Status",
+    "tagsLabel": "Tags",
+    "tagsPlaceholder": "Comma separated",
+    "cancel": "Cancel",
+    "saving": "Saving...",
+    "create": "Create Case",
+    "save": "Save Changes",
+    "severity": {
+      "low": "Low",
+      "medium": "Medium",
+      "high": "High",
+      "critical": "Critical"
+    },
+    "status": {
+      "active": "Active",
+      "inactive": "Inactive"
+    },
+    "toasts": {
+      "titleRequired": "Title is required",
+      "contentRequired": "Content is required",
+      "loginRequired": "Please login first",
+      "loadFailed": "Failed to load test case",
+      "updateSuccess": "Test case updated",
+      "createSuccess": "Test case created",
+      "saveFailed": "Save failed"
+    }
+  }
+}

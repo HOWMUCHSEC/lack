@@ -1,0 +1,947 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/content_safety_report.schema.zh.json",
+  "title": "内容安全评测报告（Content Safety Report）- 中文版",
+  "description": "用于对 LLM/智能体/RAG/多模态等系统进行内容安全评测的结构化 Schema（中文字段说明）。",
+  "type": "object",
+  "required": [
+    "meta",
+    "scope",
+    "policy_mapping",
+    "threat_model",
+    "methodology",
+    "metrics",
+    "coverage",
+    "case_records",
+    "scoring",
+    "remediation_plan"
+  ],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "description": "报告与被测对象（SUT）的元信息（谁、何时、在哪儿、由谁负责）。",
+      "required": [
+        "report_id",
+        "sut",
+        "run_window",
+        "environment",
+        "owners"
+      ],
+      "properties": {
+        "report_id": {
+          "type": "string",
+          "description": "报告唯一标识（如 CSR-2025-11-001）。"
+        },
+        "version": {
+          "type": "string",
+          "default": "1.0.0",
+          "description": "本 Schema/报告格式版本号。"
+        },
+        "sut": {
+          "type": "object",
+          "description": "被测系统（System Under Test）信息。",
+          "required": [
+            "name",
+            "type",
+            "model",
+            "inference_params"
+          ],
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "被测系统名称。"
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "LLM",
+                "Agent",
+                "AI_App",
+                "RAG_System",
+                "Multimodal_Model"
+              ],
+              "description": "被测对象类型。",
+              "x-enumNames": [
+                "大语言模型",
+                "智能体/Agent",
+                "AI 应用",
+                "RAG 系统",
+                "多模态模型"
+              ]
+            },
+            "model": {
+              "type": "string",
+              "description": "模型或服务版本（如 gpt-X、llama-X、内部模型@commit）。"
+            },
+            "system_prompt_hash": {
+              "type": "string",
+              "description": "系统提示摘要哈希（用于复现与审计）。"
+            },
+            "inference_params": {
+              "type": "object",
+              "description": "推理参数（影响输出与安全表现）。",
+              "properties": {
+                "temperature": {
+                  "type": "number",
+                  "description": "采样温度。"
+                },
+                "top_p": {
+                  "type": "number",
+                  "description": "核采样阈值。"
+                },
+                "max_tokens": {
+                  "type": "integer",
+                  "description": "最大生成长度。"
+                },
+                "decoding": {
+                  "type": "string",
+                  "enum": [
+                    "greedy",
+                    "sampling",
+                    "beam",
+                    "other"
+                  ],
+                  "x-enumNames": [
+                    "贪心",
+                    "采样",
+                    "集束搜索",
+                    "其他"
+                  ],
+                  "description": "解码策略。"
+                }
+              },
+              "additionalProperties": true
+            },
+            "deployment": {
+              "type": "string",
+              "enum": [
+                "SaaS",
+                "Private_Cloud",
+                "On_Prem",
+                "Edge"
+              ],
+              "x-enumNames": [
+                "公有云/SaaS",
+                "私有云",
+                "本地部署",
+                "边缘"
+              ],
+              "description": "部署形态。"
+            }
+          }
+        },
+        "run_window": {
+          "type": "object",
+          "description": "本次评测覆盖的时间窗口。",
+          "required": [
+            "start",
+            "end"
+          ],
+          "properties": {
+            "start": {
+              "type": "string",
+              "format": "date-time",
+              "description": "开始时间（ISO 8601）。"
+            },
+            "end": {
+              "type": "string",
+              "format": "date-time",
+              "description": "结束时间（ISO 8601）。"
+            }
+          }
+        },
+        "environment": {
+          "type": "object",
+          "description": "运行环境与边界（便于复现与差异分析）。",
+          "properties": {
+            "hardware": {
+              "type": "string",
+              "description": "硬件配置（如 GPU/CPU 型号与数量）。"
+            },
+            "image_digest": {
+              "type": "string",
+              "description": "容器/镜像指纹（sha256）。"
+            },
+            "dependencies": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "依赖列表（包与版本）。"
+            },
+            "network_policy": {
+              "type": "string",
+              "description": "网络出入策略（如出网白名单）。"
+            }
+          }
+        },
+        "owners": {
+          "type": "array",
+          "description": "该报告与整改的主要 Owner/团队。",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        }
+      }
+    },
+    "scope": {
+      "type": "object",
+      "description": "评测范围：模态、语言、业务域、使用到的工具、风险类目等。",
+      "properties": {
+        "modalities": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ModalityEnum"
+          },
+          "description": "覆盖的模态类型。"
+        },
+        "languages": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "zh",
+            "en"
+          ],
+          "description": "覆盖的语言列表（如 zh、en）。"
+        },
+        "business_domains": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "业务域/场景（客服、医疗、金融等）。"
+        },
+        "tools": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "涉及的外部工具/函数名。"
+        },
+        "risk_categories_in_scope": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ThreatCategoryEnum"
+          },
+          "description": "纳入评测的风险类目。"
+        }
+      }
+    },
+    "policy_mapping": {
+      "type": "object",
+      "description": "组织的内容政策、外部标准及公共基准映射（便于对齐与对外沟通）。",
+      "properties": {
+        "content_policies": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "内部内容政策/规则名称。"
+        },
+        "standards": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "参考的法规/标准（如 NIST AI RMF、ISO/IEC 42001）。"
+        },
+        "public_benchmarks": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "公共基准（HELM-Safety、MLCommons Safety 等）。"
+        }
+      }
+    },
+    "threat_model": {
+      "type": "object",
+      "description": "威胁建模：严重度权重与类目评估矩阵。",
+      "required": [
+        "severity_weights",
+        "matrix"
+      ],
+      "properties": {
+        "severity_weights": {
+          "type": "object",
+          "description": "严重度（S1…S5）的权重设定，常用于计算综合风险指数。",
+          "properties": {
+            "S1": {
+              "type": "number",
+              "default": 1,
+              "description": "轻微。"
+            },
+            "S2": {
+              "type": "number",
+              "default": 2,
+              "description": "较低。"
+            },
+            "S3": {
+              "type": "number",
+              "default": 4,
+              "description": "中等。"
+            },
+            "S4": {
+              "type": "number",
+              "default": 8,
+              "description": "高。"
+            },
+            "S5": {
+              "type": "number",
+              "default": 16,
+              "description": "致命/极高。"
+            }
+          },
+          "additionalProperties": false
+        },
+        "matrix": {
+          "type": "array",
+          "description": "按类目给出发生概率（likelihood）与影响严重度（impact_severity）。",
+          "items": {
+            "type": "object",
+            "required": [
+              "category",
+              "likelihood",
+              "impact_severity"
+            ],
+            "properties": {
+              "category": {
+                "$ref": "#/$defs/ThreatCategoryEnum"
+              },
+              "likelihood": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1,
+                "description": "发生概率（0~1）。"
+              },
+              "impact_severity": {
+                "$ref": "#/$defs/SeverityEnum"
+              },
+              "notes": {
+                "type": "string",
+                "description": "补充说明/背景。"
+              }
+            }
+          }
+        }
+      }
+    },
+    "methodology": {
+      "type": "object",
+      "description": "评测方法学：测试类型、判定器、采样与会话结构等。",
+      "properties": {
+        "test_types": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "rulebased",
+              "human_redteam",
+              "llm_judge",
+              "safety_classifier"
+            ]
+          },
+          "x-enumNames": [
+            "规则集",
+            "人工红队",
+            "LLM 评判",
+            "安全分类器"
+          ],
+          "description": "所采用的测试类型组合。"
+        },
+        "judges": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "评判器列表（模型/人审/分类器）。"
+        },
+        "sampling": {
+          "type": "object",
+          "description": "采样与复现实验设置。",
+          "properties": {
+            "seed": {
+              "type": "integer",
+              "description": "随机种子。"
+            },
+            "repeats": {
+              "type": "integer",
+              "minimum": 1,
+              "default": 5,
+              "description": "重复运行次数（建议≥5）。"
+            },
+            "temperature_grid": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "description": "温度网格（用于鲁棒性分析）。"
+            }
+          }
+        },
+        "conversation_patterns": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "single_turn",
+              "multi_turn",
+              "reflection",
+              "tool_use"
+            ]
+          },
+          "x-enumNames": [
+            "单轮",
+            "多轮",
+            "反思/自我修复",
+            "工具使用"
+          ],
+          "description": "对话/任务结构样式。"
+        },
+        "multilingual_bypass": {
+          "type": "boolean",
+          "default": true,
+          "description": "是否覆盖多语言/编码/谐音等绕过技术。"
+        }
+      }
+    },
+    "metrics": {
+      "type": "object",
+      "description": "核心指标：全局与分类目。用于度量安全与防线副作用。",
+      "required": [
+        "global",
+        "by_category"
+      ],
+      "properties": {
+        "global": {
+          "$ref": "#/$defs/MetricSet"
+        },
+        "by_category": {
+          "type": "array",
+          "description": "按风险类目细分的指标集。",
+          "items": {
+            "type": "object",
+            "required": [
+              "category",
+              "metrics"
+            ],
+            "properties": {
+              "category": {
+                "$ref": "#/$defs/ThreatCategoryEnum"
+              },
+              "metrics": {
+                "$ref": "#/$defs/MetricSet"
+              }
+            }
+          }
+        },
+        "thresholds": {
+          "type": "object",
+          "description": "上线/验收门槛（如最大违规率、逃逸率阈值）。",
+          "properties": {
+            "max_VR": {
+              "type": "number",
+              "description": "最大允许违规率（Violation Rate）。"
+            },
+            "max_CVR": {
+              "type": "number",
+              "description": "最大允许严重违规率（Critical VR）。"
+            },
+            "max_ER": {
+              "type": "number",
+              "description": "最大允许逃逸率（Escape Rate）。"
+            },
+            "max_iterative_escape_rate": {
+              "type": "number",
+              "description": "最大允许迭代逃逸率（iER）。"
+            }
+          }
+        }
+      }
+    },
+    "coverage": {
+      "type": "object",
+      "description": "覆盖度：类目×模态×语言×会话结构的用例分布。",
+      "properties": {
+        "matrix": {
+          "type": "array",
+          "description": "覆盖明细矩阵。",
+          "items": {
+            "type": "object",
+            "properties": {
+              "category": {
+                "$ref": "#/$defs/ThreatCategoryEnum"
+              },
+              "modality": {
+                "$ref": "#/$defs/ModalityEnum"
+              },
+              "language": {
+                "type": "string",
+                "description": "测试语言（如 zh、en）。"
+              },
+              "conversation": {
+                "type": "string",
+                "enum": [
+                  "single_turn",
+                  "multi_turn",
+                  "reflection",
+                  "tool_use"
+                ],
+                "x-enumNames": [
+                  "单轮",
+                  "多轮",
+                  "反思/自我修复",
+                  "工具使用"
+                ]
+              },
+              "cases": {
+                "type": "integer",
+                "minimum": 0,
+                "description": "该组合下的用例数量。"
+              }
+            }
+          }
+        },
+        "totals": {
+          "type": "object",
+          "description": "总体统计。",
+          "properties": {
+            "cases": {
+              "type": "integer",
+              "description": "总用例数。"
+            },
+            "passes": {
+              "type": "integer",
+              "description": "通过数。"
+            },
+            "fails": {
+              "type": "integer",
+              "description": "失败数（发生违规/未按预期）。"
+            },
+            "blocked": {
+              "type": "integer",
+              "description": "被策略阻断数。"
+            }
+          }
+        }
+      }
+    },
+    "case_records": {
+      "type": "array",
+      "description": "案例级明细记录（最重要的可复现证据单元）。",
+      "items": {
+        "$ref": "#/$defs/CaseRecord"
+      },
+      "minItems": 1
+    },
+    "visualization": {
+      "type": "object",
+      "description": "可视化配置（在报告中展示哪些图表）。",
+      "properties": {
+        "risk_heatmap": {
+          "type": "boolean",
+          "default": true,
+          "description": "风险热力图。"
+        },
+        "blocking_vs_overblock_trend": {
+          "type": "boolean",
+          "default": true,
+          "description": "阻断/误杀趋势图。"
+        },
+        "coverage_radar": {
+          "type": "boolean",
+          "default": true,
+          "description": "覆盖度雷达图。"
+        },
+        "attack_chain_sankey": {
+          "type": "boolean",
+          "default": true,
+          "description": "攻击链桑基图。"
+        }
+      }
+    },
+    "delivery": {
+      "type": "object",
+      "description": "交付与留存策略。",
+      "properties": {
+        "artifacts": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "产物路径/URI（日志、脚本、导出等）。"
+        },
+        "data_retention_days": {
+          "type": "integer",
+          "default": 90,
+          "description": "数据保留天数。"
+        }
+      }
+    },
+    "scoring": {
+      "type": "object",
+      "description": "评分设定与总体得分。",
+      "required": [
+        "category_weights",
+        "formula"
+      ],
+      "properties": {
+        "category_weights": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "number"
+          },
+          "description": "各风险类目的业务权重，如 {\"prompt_injection_indirect\": 2.0}。"
+        },
+        "formula": {
+          "type": "string",
+          "default": "SRI = sum_c( w_c * (0.5*VR_c + 0.3*ER_c + 0.2*iER_c) * SevWeight_c )",
+          "description": "综合风险指数（SRI）计算公式（可按需调整系数）。"
+        },
+        "overall_score_0_100": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "总评估分（0~100）。"
+        }
+      }
+    },
+    "remediation_plan": {
+      "type": "object",
+      "description": "整改计划与 Gate。",
+      "properties": {
+        "top_risks": {
+          "type": "array",
+          "description": "Top 风险清单（含负责人、SLA 与动作）。",
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "severity",
+              "owner",
+              "actions"
+            ],
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "风险名称。"
+              },
+              "severity": {
+                "$ref": "#/$defs/SeverityEnum"
+              },
+              "owner": {
+                "type": "string",
+                "description": "责任人/团队。"
+              },
+              "sla_days": {
+                "type": "integer",
+                "description": "整改时限（天）。"
+              },
+              "actions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "整改动作列表。"
+              }
+            }
+          }
+        },
+        "gates": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "发布门禁条件（如 CVR<=0.02）。"
+        }
+      }
+    }
+  },
+  "$defs": {
+    "SeverityEnum": {
+      "type": "string",
+      "enum": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5"
+      ],
+      "description": "严重度分级：S1（轻微）… S5（致命）。"
+    },
+    "ModalityEnum": {
+      "type": "string",
+      "enum": [
+        "text",
+        "image",
+        "audio",
+        "video",
+        "code",
+        "mixed"
+      ],
+      "x-enumNames": [
+        "文本",
+        "图像",
+        "音频",
+        "视频",
+        "代码",
+        "混合"
+      ],
+      "description": "模态类型。"
+    },
+    "ThreatCategoryEnum": {
+      "type": "string",
+      "enum": [
+        "jailbreak_bypass",
+        "prompt_injection_direct",
+        "prompt_injection_indirect",
+        "data_exfiltration",
+        "tool_abuse_privilege_escalation",
+        "privacy_pii_leak",
+        "hallucination_defamation",
+        "fraud_deception",
+        "self_harm",
+        "sexual_content",
+        "violence",
+        "hateful_harassment",
+        "illegal_activities",
+        "bias_discrimination"
+      ],
+      "x-enumNames": [
+        "越狱/规范绕过",
+        "提示注入（直接）",
+        "提示注入（间接/RAG）",
+        "数据外泄",
+        "工具滥用/权限提升",
+        "隐私/PII 泄露",
+        "幻觉/诽谤",
+        "欺诈/欺骗",
+        "自伤/危险行为",
+        "成人/性内容",
+        "暴力",
+        "仇恨/骚扰",
+        "非法活动",
+        "偏见/歧视"
+      ],
+      "description": "风险类目枚举。"
+    },
+    "MetricSet": {
+      "type": "object",
+      "description": "一组用于度量安全表现的指标。",
+      "properties": {
+        "violation_rate": {
+          "type": "number",
+          "description": "违规率（VR）：触发违规的会话占比。"
+        },
+        "critical_violation_rate": {
+          "type": "number",
+          "description": "严重违规率（CVR）。"
+        },
+        "escape_rate": {
+          "type": "number",
+          "description": "逃逸率（ER）：有防线时仍输出违规的占比。"
+        },
+        "iterative_escape_rate": {
+          "type": "object",
+          "description": "迭代逃逸率（iER@k）。",
+          "properties": {
+            "k": {
+              "type": "integer",
+              "minimum": 1,
+              "default": 3,
+              "description": "迭代次数 k。"
+            },
+            "value": {
+              "type": "number",
+              "description": "迭代逃逸率数值。"
+            }
+          }
+        },
+        "block_rate": {
+          "type": "number",
+          "description": "阻断率（BR）。"
+        },
+        "overblock_rate": {
+          "type": "number",
+          "description": "误杀率（OBR）。"
+        },
+        "guardrail_effectiveness": {
+          "type": "number",
+          "description": "守门器有效性（GE = BR - OBR）。"
+        },
+        "prompt_injection_success_rate": {
+          "type": "number",
+          "description": "提示注入成功率（PISR）。"
+        },
+        "data_leak_rate": {
+          "type": "number",
+          "description": "数据泄露率（DLR）。"
+        },
+        "tool_misuse_rate": {
+          "type": "number",
+          "description": "工具滥用率（TMR）。"
+        },
+        "cost_per_incident": {
+          "type": "number",
+          "description": "每次安全事件的平均成本（可用 token/费用）。"
+        },
+        "factuality_score": {
+          "type": "number",
+          "description": "事实性评分（越高越好）。"
+        },
+        "attribution_coverage": {
+          "type": "number",
+          "description": "引用/出处覆盖率。"
+        },
+        "fairness_delta": {
+          "type": "number",
+          "description": "公平性差异（如 ΔFPR/ΔTPR 等综合）。"
+        },
+        "ux_latency_ms": {
+          "type": "number",
+          "description": "平均用户时延（毫秒）。"
+        }
+      }
+    },
+    "CaseRecord": {
+      "type": "object",
+      "description": "单条测试用例的完整证据记录。",
+      "required": [
+        "case_id",
+        "category",
+        "modality",
+        "language",
+        "result",
+        "severity",
+        "metrics",
+        "evidence"
+      ],
+      "properties": {
+        "case_id": {
+          "type": "string",
+          "description": "用例 ID（唯一）。"
+        },
+        "category": {
+          "$ref": "#/$defs/ThreatCategoryEnum"
+        },
+        "modality": {
+          "$ref": "#/$defs/ModalityEnum"
+        },
+        "language": {
+          "type": "string",
+          "description": "用例语言（zh/en/...）。"
+        },
+        "conversation": {
+          "type": "string",
+          "enum": [
+            "single_turn",
+            "multi_turn",
+            "reflection",
+            "tool_use"
+          ],
+          "x-enumNames": [
+            "单轮",
+            "多轮",
+            "反思/自我修复",
+            "工具使用"
+          ],
+          "description": "会话结构。"
+        },
+        "sut_type": {
+          "type": "string",
+          "enum": [
+            "LLM",
+            "Agent",
+            "AI_App",
+            "RAG_System",
+            "Multimodal_Model"
+          ],
+          "x-enumNames": [
+            "大语言模型",
+            "智能体",
+            "AI 应用",
+            "RAG 系统",
+            "多模态模型"
+          ],
+          "description": "该用例对应的被测对象类型。"
+        },
+        "tools_called": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "触发的工具/函数调用清单。"
+        },
+        "result": {
+          "type": "string",
+          "enum": [
+            "pass",
+            "fail",
+            "blocked"
+          ],
+          "x-enumNames": [
+            "通过",
+            "失败",
+            "被阻断"
+          ],
+          "description": "用例结论。"
+        },
+        "severity": {
+          "$ref": "#/$defs/SeverityEnum"
+        },
+        "metrics": {
+          "$ref": "#/$defs/MetricSet"
+        },
+        "evidence": {
+          "type": "object",
+          "description": "与该用例绑定的可核查证据。",
+          "properties": {
+            "trace_id": {
+              "type": "string",
+              "description": "追踪 ID（串联会话与工具链）。"
+            },
+            "log_hash": {
+              "type": "string",
+              "description": "日志哈希（防篡改）。"
+            },
+            "snippet_redacted": {
+              "type": "string",
+              "description": "脱敏后的关键片段。"
+            },
+            "retrieval_citations": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "出处/引用列表（如 URL/文档 ID）。"
+            }
+          }
+        },
+        "mitigation": {
+          "type": "object",
+          "description": "针对该用例的整改计划。",
+          "properties": {
+            "owner": {
+              "type": "string",
+              "description": "责任人/团队。"
+            },
+            "actions": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "整改动作。"
+            },
+            "gate_rule": {
+              "type": "string",
+              "description": "发布门禁规则（针对该类问题）。"
+            }
+          }
+        }
+      }
+    }
+  }
+}
